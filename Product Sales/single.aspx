@@ -45,7 +45,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	    });
 	
 	});
-</script>		
+</script>	
+    <style type="text/css">
+        .rank:hover {
+            border: 1px solid #73B6E1;
+            transition: 0.5s all ease;
+            -webkit-transition: 0.5s all ease;
+            -moz-transition: 0.5s all ease;
+            -o-transition: 0.5s all ease;
+            -ms-transition: 0.5s all ease;
+        }
+    </style>
+	
 </head>
 <body> 
 	<!--top-header-->
@@ -384,50 +395,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</li>
 	 		</ul>
 				</div>
-				<div class="latestproducts">
-					<div class="product-one">
-						<div class="col-md-4 product-left p-left"> 
-							<div class="product-main simpleCart_shelfItem">
-								<a href="single.aspx" class="mask"><img class="img-responsive zoom-img" src="images/p-1.png" alt="" /></a>
-								<div class="product-bottom">
-									<h3>Smart Watches</h3>
-									<p>Explore Now</p>
-									<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">$ 329</span></h4>
-								</div>
-								<div class="srch">
-									<span>-50%</span>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 product-left p-left"> 
-							<div class="product-main simpleCart_shelfItem">
-								<a href="single.aspx" class="mask"><img class="img-responsive zoom-img" src="images/p-2.png" alt="" /></a>
-								<div class="product-bottom">
-									<h3>Smart Watches</h3>
-									<p>Explore Now</p>
-									<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">$ 329</span></h4>
-								</div>
-								<div class="srch">
-									<span>-50%</span>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 product-left p-left"> 
-							<div class="product-main simpleCart_shelfItem">
-								<a href="single.aspx" class="mask"><img class="img-responsive zoom-img" src="images/p-3.png" alt="" /></a>
-								<div class="product-bottom">
-									<h3>Smart Watches</h3>
-									<p>Explore Now</p>
-									<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">$ 329</span></h4>
-								</div>
-								<div class="srch">
-									<span>-50%</span>
-								</div>
-							</div>
-						</div>
-						<div class="clearfix"></div>
-					</div>
-				</div>
 			</div>
 				<div class="col-md-3 single-right">
 					<div class="w_sidebar">
@@ -436,18 +403,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="">
                             <asp:Repeater ID="Repeater1" runat="server">
                                 <ItemTemplate>
-                                    <div style="border: 1px solid #fff; height: 100px; padding: 6px 0 9px; overflow: hidden; cursor: pointer;">
-                                       <!-- <div style="height: 100px; overflow: hidden;"> -->
+                                    <div class="rank"> 
+                                        <div style="border: 1px solid #fff; height: 100px; padding: 6px 0 9px; overflow: hidden; cursor: pointer;">
+                                      
                                         <a href="single.aspx?id=<%#Eval("id") %>"  >
                                                 <img style="width: 60px; height: 80px; float: left; margin-top: 3px; margin-left: 15px; border: 1px solid #ececec;" src="images/<%#Eval("picture") %>" alt="" /></a>
-                                            <div>
+                                        <div style="height: 60px; margin-left:110px; overflow: hidden;">
                                             <p style="height: 34px; overflow: hidden;">
                                                 <%#Eval("name") %>
                                             </p>
                                                 <p><a style="height: 18px; line-height: 18px; padding-top: 8px; overflow: hidden;"
-                                            href="#"><i></i></a><span class=" item_price">$ <%#Eval("price") %></span></p>
+                                            href="#"><i></i></a><span style="color: darkred">$ <%#Eval("price") %></span></p>
                                             </div>
-                                       <!-- </div> -->
+                                       </div> 
                                     </div>
                                 </ItemTemplate>
                             </asp:Repeater>
