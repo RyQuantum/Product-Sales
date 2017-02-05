@@ -12,7 +12,22 @@ namespace Product_Sales
     public partial class single : System.Web.UI.Page
     {
         
-        String id = "0";
+        protected String id = "0";
+
+        protected String name = "";
+        protected int price = 0;
+        protected String color = "";
+        protected String size = "";
+        protected String category = "";
+        protected String brand = "";
+        protected String description = "";
+        protected String information = "";
+        protected int rate = 0;
+        protected int numofRate = 0;
+        protected String reviews = "";
+        protected String tag = "";
+        protected String sku = "";
+        protected String picture = "";
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -20,20 +35,54 @@ namespace Product_Sales
             conn.Open();
 
             id = Request.QueryString["id"];
+            if(String.IsNullOrEmpty(id))
+            {
+                Response.Redirect("products.aspx");
+            }
             String sql = "update products set clickTime += 1 where id =";
-            String sqlTop = "SELECT TOP (10) id, name, price, picture FROM products ORDER BY clickTime DESC";
+            String sqlTop = "SELECT TOP (10) * FROM products ORDER BY clickTime DESC";
             if (Session["cart"] == null)
             {
                 Session["cart"] = new Dictionary<String, int>();
             }
             if (!this.IsPostBack)
             {
-                DataSet ds = GetData(sqlTop + ";" + sql + id, conn);
+                DataSet ds0 = GetData(sqlTop + ";" + sql + id, conn);
                 //DataSet ds = GetData(sqlTop, conn);
-                Repeater1.DataSource = ds;
+                Repeater1.DataSource = ds0;
                 Repeater1.DataBind();
-
             }
+
+            sql = "select * from products where id = " + id;
+            DataSet ds = GetData(sql, conn);
+
+            this.name = Convert.ToString(ds.Tables[0].Rows[0]["name"]);
+            this.price = Convert.ToInt32(ds.Tables[0].Rows[0]["price"]);
+            this.color = Convert.ToString(ds.Tables[0].Rows[0]["color"]);
+            String tmp = "";
+            foreach(String s in color.Split(','))
+            {
+                tmp += "<option>" + s + "</option>";
+            }
+            color = tmp;
+            this.category = Convert.ToString(ds.Tables[0].Rows[0]["catogory"]);
+            this.size = Convert.ToString(ds.Tables[0].Rows[0]["size"]);
+            tmp = ""; 
+            foreach(String s in size.Split(','))
+            {
+                tmp += "<option>" + s + "</option>";
+            }
+            size = tmp;
+            this.brand = Convert.ToString(ds.Tables[0].Rows[0]["brand"]);
+            this.description = Convert.ToString(ds.Tables[0].Rows[0]["description"]);
+            this.information = Convert.ToString(ds.Tables[0].Rows[0]["infomation"]);
+            this.rate = Convert.ToInt32(ds.Tables[0].Rows[0]["rate"]);
+            this.numofRate = Convert.ToInt32(ds.Tables[0].Rows[0]["numofRate"]);
+            this.reviews = Convert.ToString(ds.Tables[0].Rows[0]["reviews"]);
+            this.tag = Convert.ToString(ds.Tables[0].Rows[0]["tag"]);
+            this.sku = Convert.ToString(ds.Tables[0].Rows[0]["sku"]);
+            this.picture = Convert.ToString(ds.Tables[0].Rows[0]["picture"]);
+
         }
         protected DataSet GetData(String queryString, SqlConnection conn)
         {
