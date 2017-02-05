@@ -12,7 +12,9 @@
                 </div>
                 <div class="account-main">
                     <div class="col-md-6 account-left">
-                        <asp:SqlDataSource ID="SqlDataSourceInsertProduct" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:tproductSalesConnectionLocalhost %>" InsertCommand="INSERT INTO [products] ([name], [price], [discount], [color], [size], [catogory], [brand], [description], [infomation], [rate], [numOfRate], [reviews], [tag], [sku], [picture]) VALUES (@name, @price, @discount, @color, @size, @catogory, @brand, @description, @infomation, @rate, @numOfRate, @reviews, @tag, @sku, @picture)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [products]">
+                        <asp:SqlDataSource ID="SqlDataSourceInsertProduct" runat="server" ConflictDetection="CompareAllValues"
+                            ConnectionString="<%$ ConnectionStrings:tproductSalesConnectionLocalhost %>"
+                            InsertCommand="INSERT INTO products(name, price, discount, color, size, catogory, brand, description, infomation, rate, numOfRate, reviews, tag, sku) VALUES (@name, @price, @discount, @color, @size, @catogory, @brand, @description, @infomation, @rate, @numOfRate, @reviews, @tag, @sku)" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [products]">
                             <InsertParameters>
                                 <asp:ControlParameter Name="name" ControlID="Insertname" Type="String" />
                                 <asp:ControlParameter Name="price" ControlID="Insertprice" Type="Int32" />
@@ -28,29 +30,27 @@
                                 <asp:ControlParameter Name="reviews" ControlID="Insertreviews" Type="String" />
                                 <asp:ControlParameter Name="tag" ControlID="Inserttag" Type="String" />
                                 <asp:ControlParameter Name="sku" ControlID="Insertsku" Type="String" />
-                                <asp:ControlParameter Name="picture" ControlID="Insertpicture" Type="String" />
-                                
+
                             </InsertParameters>
                         </asp:SqlDataSource>
 
-                        <asp:TextBox ID="Insertname" runat="server"></asp:TextBox>
-                        <asp:TextBox ID="Insertprice" runat="server"></asp:TextBox>
-                        <asp:TextBox ID="Insertdiscount" runat="server"></asp:TextBox>
-                        <asp:TextBox ID="Insertcolor" runat="server"></asp:TextBox>
-                        <asp:TextBox ID="Insertsize" runat="server"></asp:TextBox>
-                        <asp:TextBox ID="Insertcatogory" runat="server"></asp:TextBox>
-                        <asp:TextBox ID="Insertbrand" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="Insertname" placeholder="Product Name" TabIndex="1" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="Insertprice" placeholder="Price" TabIndex="2" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="Insertdiscount" placeholder="Discount" TabIndex="3" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="Insertcolor" placeholder="Color" TabIndex="4" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="Insertsize" placeholder="Size" TabIndex="5" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="Insertcatogory" placeholder="Category" TabIndex="6" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="Insertbrand" placeholder="Brand" TabIndex="7" runat="server"></asp:TextBox>
                     </div>
                     <div class="col-md-6 account-left">
 
-                        <asp:TextBox ID="Insertdescription" runat="server"></asp:TextBox>
-                        <asp:TextBox ID="Insertinfomation" runat="server"></asp:TextBox>
-                        <asp:TextBox ID="Insertrate" runat="server"></asp:TextBox>
-                        <asp:TextBox ID="InsertnumOfRate" runat="server"></asp:TextBox>
-                        <asp:TextBox ID="Insertreviews" runat="server"></asp:TextBox>
-                        <asp:TextBox ID="Inserttag" runat="server"></asp:TextBox>
-                        <asp:TextBox ID="Insertsku" runat="server"></asp:TextBox>
-                        <asp:TextBox ID="Insertpicture" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="Insertdescription" placeholder="Description" TabIndex="8" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="Insertinfomation" placeholder="Information" TabIndex="9" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="Insertrate" placeholder="Rate" TabIndex="10" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="InsertnumOfRate" placeholder="Num of Rate" TabIndex="10" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="Insertreviews" placeholder="Review" TabIndex="11" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="Inserttag" placeholder="Tag" TabIndex="12" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="Insertsku" placeholder="SKU" TabIndex="13" runat="server"></asp:TextBox>
 
                     </div>
                     <div class="address submit">
