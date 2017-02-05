@@ -94,10 +94,16 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="addProduct.aspx" />
+    <Content Include="addUser.aspx" />
+    <Content Include="adminLogin.aspx" />
+    <Content Include="adminPage.aspx" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\flexslider.css" />
     <Content Include="css\memenu.css" />
     <Content Include="css\style.css" />
+    <Content Include="editProduct.aspx" />
+    <Content Include="editUser.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -131,6 +137,34 @@
     <Compile Include="account.aspx.designer.cs">
       <DependentUpon>account.aspx</DependentUpon>
     </Compile>
+    <Compile Include="addProduct.aspx.cs">
+      <DependentUpon>addProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addProduct.aspx.designer.cs">
+      <DependentUpon>addProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="addUser.aspx.cs">
+      <DependentUpon>addUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addUser.aspx.designer.cs">
+      <DependentUpon>addUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminLogin.aspx.cs">
+      <DependentUpon>adminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminLogin.aspx.designer.cs">
+      <DependentUpon>adminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="adminPage.aspx.cs">
+      <DependentUpon>adminPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="adminPage.aspx.designer.cs">
+      <DependentUpon>adminPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="checkout.aspx.cs">
       <DependentUpon>checkout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -144,6 +178,20 @@
     </Compile>
     <Compile Include="contact.aspx.designer.cs">
       <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editProduct.aspx.cs">
+      <DependentUpon>editProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editProduct.aspx.designer.cs">
+      <DependentUpon>editProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="editUser.aspx.cs">
+      <DependentUpon>editUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editUser.aspx.designer.cs">
+      <DependentUpon>editUser.aspx</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
