@@ -110,6 +110,7 @@
     </Content>
     <Content Include="Site1.Master" />
     <Content Include="Site2.Master" />
+    <Content Include="Admin.master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -150,6 +151,13 @@
     </Compile>
     <Compile Include="addUser.aspx.designer.cs">
       <DependentUpon>addUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.master.cs">
+      <DependentUpon>Admin.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.master.designer.cs">
+      <DependentUpon>Admin.master</DependentUpon>
     </Compile>
     <Compile Include="adminLogin.aspx.cs">
       <DependentUpon>adminLogin.aspx</DependentUpon>
