@@ -157,15 +157,6 @@ namespace Product_Sales {
         protected global::System.Web.UI.WebControls.TextBox Insertsku;
         
         /// <summary>
-        /// Insertpicture control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Insertpicture;
-        
-        /// <summary>
         /// BinsertProduct control.
         /// </summary>
         /// <remarks>
