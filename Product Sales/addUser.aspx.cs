@@ -17,23 +17,44 @@ namespace Product_Sales
             }
             else
             {
-                Response.Redirect("adminLogin.aspx");
+                Response.Redirect("accounts.aspx");
             }
         }
         protected void Binsert_Click(object sender, EventArgs e)
         {
-            HttpContext.Current.Response.Write("<script>alert('going to store user " + ins_Username.Text + "')</script>");
-
-            try
+            if (ValidateUserData() == true)
             {
-                SqlDataSourceInsertUser.Insert();
-                HttpContext.Current.Response.Write("<script>alert('Successfully Added user " + ins_Username.Text + "')</script>");
+                try
+                {
+                    SqlDataSourceInsertUser.Insert();
+                    HttpContext.Current.Response.Write("<script>alert('Successfully Added user " + ins_Username.Text + "')</script>");
+                    ins_Username.Text = "";
+                    ins_Password.Text = "";
+                    passwdVerify.Text = "";
+                    ins_Email.Text = "";
+                    ins_FirstName.Text = "";
+                    ins_LastName.Text = "";
+                    ins_Mobile.Text = "";
+                    ins_Address.Text = "";
+                    ins_admin.SelectedValue = "N";
+                    ins_sex.SelectedValue = "M";
+                }
+                catch
+                {
+                    HttpContext.Current.Response.Write("<script>alert('Not able to Added user " + ins_Username.Text + "')</script>");
+                }
+            }
+            else {
+                HttpContext.Current.Response.Write("<script>alert('Invalid Inputs')</script>");
+            }
+        }
 
-            }
-            catch
-            {
-                HttpContext.Current.Response.Write("<script>alert('Not able to Added user " + ins_Username.Text + "')</script>");
-            }
+        private bool ValidateUserData()
+        {
+            if ( (ins_Username.Text.Length > 0 ) && (ins_Password.Text.Length > 0) && (ins_Email.Text.Length > 0) && (ins_FirstName.Text.Length > 0) )
+                if (ins_Password.Text == passwdVerify.Text)
+                    return true;
+            return false;
         }
     }
 }

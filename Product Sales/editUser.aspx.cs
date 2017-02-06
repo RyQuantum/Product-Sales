@@ -18,7 +18,7 @@ namespace Product_Sales
             }
             else
             {
-                Response.Redirect("adminLogin.aspx");
+                Response.Redirect("accounts.aspx");
             }
         }
         protected void Binsert_Click(object sender, EventArgs e)
