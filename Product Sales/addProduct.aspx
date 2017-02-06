@@ -37,7 +37,7 @@
                         <asp:TextBox ID="Insertname" placeholder="Product Name" TabIndex="1" runat="server"></asp:TextBox>
                         <asp:TextBox ID="Insertprice" placeholder="Price" TabIndex="2" runat="server"></asp:TextBox>
                         <asp:TextBox ID="Insertdiscount" placeholder="Discount" TabIndex="3" runat="server"></asp:TextBox>
-                        <asp:TextBox ID="Insertcolor" placeholder="Color" TabIndex="4" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="Insertcolor" placeholder="color" TabIndex="4" runat="server"></asp:TextBox>
                         <asp:TextBox ID="Insertsize" placeholder="Size" TabIndex="5" runat="server"></asp:TextBox>
                         <asp:TextBox ID="Insertcatogory" placeholder="Category" TabIndex="6" runat="server"></asp:TextBox>
                         <asp:TextBox ID="Insertbrand" placeholder="Brand" TabIndex="7" runat="server"></asp:TextBox>

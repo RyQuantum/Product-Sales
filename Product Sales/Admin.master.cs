@@ -7,21 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace Product_Sales
 {
-    public partial class editProduct : System.Web.UI.Page
+    public partial class Admin : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if ((String)Session["isAdmin"] == "Y")
-            {
-                //success
-            }
-            else
-            {
-                Response.Redirect("adminLogin.aspx");
-            }
         }
-
-
     }
 }

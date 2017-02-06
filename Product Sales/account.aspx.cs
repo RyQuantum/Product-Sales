@@ -20,23 +20,33 @@ namespace Product_Sales
         {
             String username = UserName.Text;
             String password = Password.Text;
+            String sqlQuery = "select firstName , isAdmin from userlogin where username = '" + username + "' and password = '" + password + "'";
 
             SqlConnection conn = new SqlConnection();
+
             conn.ConnectionString = "Initial Catalog=ProductSales;Data Source=.;Integrated Security=true";
             conn.Open();
-
-            SqlCommand cmd = new SqlCommand("select firstName from userlogin where username = '" + username + "' and password = '" + password + "'", conn);
-            Object result = cmd.ExecuteScalar();
-            if (result != null)
+            
+            SqlCommand cmd = new SqlCommand(sqlQuery, conn);
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
             {
                 Session["UserName"] = username;
-                Session["FirstName"] = result;
-                Response.Redirect("index.aspx");
-            } else
-            {
-                HttpContext.Current.Response.Write("<script>alert('Wrong username or password!')</script>");
+                Session["FirstName"] = (String)reader["firstname"];
+                Session["isAdmin"] = (String)reader["isAdmin"];
+                if ((String)Session["isAdmin"] == "Y")
+                {
+
+                    Response.Redirect("adminPage.aspx");
+                }
+                else
+                {
+                    Response.Redirect("index.aspx");
+                }
             }
             conn.Close();
+            HttpContext.Current.Response.Write("<script>alert('Wrong username or password!')</script>");
+         
         }
     }
 }

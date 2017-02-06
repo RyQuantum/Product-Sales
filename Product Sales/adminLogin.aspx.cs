@@ -30,21 +30,22 @@ namespace Product_Sales
             conn.ConnectionString = "Initial Catalog=ProductSales;Data Source=.;Integrated Security=true";
             conn.Open();
 
-            SqlCommand cmd = new SqlCommand("select firstName from userlogin where admin=1 and username = '" + username + "' and password = '" + password + "'", conn);
+            SqlCommand cmd = new SqlCommand("select firstName from userlogin where ( isAdmin='y' or isAdmin='Y' ) and username = '" + username + "' and password = '" + password + "'", conn);
+
             Object result = cmd.ExecuteScalar();
             if (result != null)
             {
                 Session["UserName"] = username;
                 Session["FirstName"] = result;
 
-                String isAdmin = "true";
+                String isAdmin = "Y";
                 Session["isAdmin"] = isAdmin;
                 
                 Response.Redirect("adminPage.aspx");
             }
             else
             {
-                String isAdmin = "false";
+                String isAdmin = "N";
                 Session["isAdmin"] = isAdmin;
                 HttpContext.Current.Response.Write("<script>alert('Wrong username or password!')</script>");
             }
