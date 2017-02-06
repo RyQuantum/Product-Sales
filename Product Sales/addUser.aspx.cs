@@ -22,15 +22,17 @@ namespace Product_Sales
         }
         protected void Binsert_Click(object sender, EventArgs e)
         {
+            HttpContext.Current.Response.Write("<script>alert('going to store user " + ins_Username.Text + "')</script>");
+
             try
             {
                 SqlDataSourceInsertUser.Insert();
-                HttpContext.Current.Response.Write("<script>alert('Successfully Added product " + ins_Username.Text + "')</script>");
+                HttpContext.Current.Response.Write("<script>alert('Successfully Added user " + ins_Username.Text + "')</script>");
 
             }
             catch
             {
-                HttpContext.Current.Response.Write("<script>alert('Not able to Added product " + ins_Username.Text + "')</script>");
+                HttpContext.Current.Response.Write("<script>alert('Not able to Added user " + ins_Username.Text + "')</script>");
             }
         }
     }

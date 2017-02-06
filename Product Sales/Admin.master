@@ -8,7 +8,7 @@
                 <div class="col-md-9 header-left">
                     <div class="top-nav">
                         <ul class="memenu skyblue">
-                            <li class="active"><a href="adminPage.aspx">Home</a></li>
+                            <li class="active"><a href="index.aspx">Home</a></li>
                             <li class="grid"><a href="#">Users</a>
                                 <div class="mepanel">
                                     <div class="col1 me-one">
@@ -31,7 +31,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="active"><a href="index.aspx">MainPage</a></li>
+                            <li class="active"><a href="adminPage.aspx"><%--Admin--%></a></li>
                             <li class="active"><a href="logout.aspx">Logout</a>
                             </li>
                         </ul>

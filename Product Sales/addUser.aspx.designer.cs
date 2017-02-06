@@ -49,6 +49,15 @@ namespace Product_Sales {
         protected global::System.Web.UI.WebControls.TextBox ins_Password;
         
         /// <summary>
+        /// passwdVerify control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox passwdVerify;
+        
+        /// <summary>
         /// ins_Email control.
         /// </summary>
         /// <remarks>
@@ -56,15 +65,6 @@ namespace Product_Sales {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox ins_Email;
-        
-        /// <summary>
-        /// ins_sex control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ins_sex;
         
         /// <summary>
         /// ins_FirstName control.
@@ -85,6 +85,24 @@ namespace Product_Sales {
         protected global::System.Web.UI.WebControls.TextBox ins_LastName;
         
         /// <summary>
+        /// ins_admin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ins_admin;
+        
+        /// <summary>
+        /// ins_sex control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ins_sex;
+        
+        /// <summary>
         /// ins_Address control.
         /// </summary>
         /// <remarks>
@@ -101,15 +119,6 @@ namespace Product_Sales {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox ins_Mobile;
-        
-        /// <summary>
-        /// ins_admin control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ins_admin;
         
         /// <summary>
         /// BinsertProduct control.
