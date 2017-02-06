@@ -9,6 +9,7 @@
                 </div>
                 <div class="account-main">
                     <div class="col-md-6 account-left">
+                        <!-- TODO format gridview -->
                         <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="userProductEdit" AllowPaging="True" AllowSorting="True">
                             <Columns>
                                 <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
