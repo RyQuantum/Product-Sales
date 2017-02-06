@@ -12,7 +12,7 @@ namespace Product_Sales
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if ((String)Session["isAdmin"] == "true")
+            if ((String)Session["isAdmin"] == "Y")
             {
                 //success
             }
