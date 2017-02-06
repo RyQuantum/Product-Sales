@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="Home" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="Product_Sales.index" %>
 
-<asp:content id="Content2" contentplaceholderid="ContentPlaceHolder1" runat="server">
+<asp:content id="Content2" contentplaceholderid="MenuPlaceHolder" runat="server">
      <!--banner-starts-->
     <div class="bnr" id="home">
         <div id="top" class="callbacks_container">

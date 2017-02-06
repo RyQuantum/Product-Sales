@@ -1,64 +1,10 @@
-﻿<%@ Page Title="Details" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="single.aspx.cs" Inherits="Product_Sales.single" %>
+﻿<%@ Page Title="Details" Language="C#" MasterPageFile="~/Site3.Master" AutoEventWireup="true" CodeBehind="single.aspx.cs" Inherits="Product_Sales.single" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
     <li class="active">Products</li>
     <li class="active">Details</li>
 </asp:Content>
 
-<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="server">
-    <style type="text/css">
-        .rank {
-            border: 1px solid #fff;
-            height: 100px;
-            padding: 6px 0 9px;
-            overflow: hidden;
-            cursor: pointer;
-        }
-
-            .rank:hover {
-                border: 1px solid #73B6E1;
-                transition: 0.5s all ease;
-                -webkit-transition: 0.5s all ease;
-                -moz-transition: 0.5s all ease;
-                -o-transition: 0.5s all ease;
-                -ms-transition: 0.5s all ease;
-            }
-
-            .rank #picture {
-                width: 60px;
-                height: 80px;
-                float: left;
-                margin-top: 3px;
-                margin-left: 15px;
-                border: 1px solid #ececec;
-            }
-            .rank .content {
-                height: 70px;
-                margin-left: 110px;
-                overflow: hidden;
-            }
-
-            .rank #name {
-                height: 25px;
-                font-size: large;
-                margin: auto;
-                overflow: hidden;
-            }
-            .rank #brand {
-                height: 30px;
-                margin: auto;
-                overflow: hidden;
-                font-size: small;
-                font-family: monospace;
-            }
-            .rank #price {
-                height: 18px;
-                line-height: 18px;
-                padding-top: 8px;
-                overflow: hidden;
-            }
-    </style>
-</asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!--start-single-->

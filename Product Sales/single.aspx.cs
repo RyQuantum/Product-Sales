@@ -40,7 +40,7 @@ namespace Product_Sales
                 Response.Redirect("products.aspx");
             }
             String sql = "update products set clickTime += 1 where id =";
-            String sqlTop = "SELECT TOP (10) * FROM products ORDER BY clickTime DESC";
+            String sqlTop = "SELECT TOP (8) * FROM products ORDER BY clickTime DESC";
             if (Session["cart"] == null)
             {
                 Session["cart"] = new Dictionary<String, int>();
