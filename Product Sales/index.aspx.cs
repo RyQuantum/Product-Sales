@@ -17,13 +17,15 @@ namespace Product_Sales
             {
                 if(String.IsNullOrEmpty(Session["login"].ToString()))
                 {
-
-                } else
+                    //TODO: missing statements
+                }
+                else
                 {
                     HttpContext.Current.Response.Write("<script>alert('Logout success!')</script>");
                     Session.Remove("Login");
                     Session.Remove("UserName");
                     Session.Remove("FirstName");
+                    //TODO:  remore isAdmin session variable
                 }
             }
             SqlConnection conn = new SqlConnection("Initial Catalog=ProductSales;Data Source=.;Integrated Security=true");

@@ -1,4 +1,7 @@
 ﻿using System;
+using System.IO;
+using System.Data;
+using System.Data.SqlClient;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -20,17 +23,26 @@ namespace Product_Sales
             else {
                 Response.Redirect("adminLogin.aspx");
             }
-
-
         }
+
         protected void Binsert_Click(object sender, EventArgs e)
         {
             if (ValidateProductData() == true)
             {
                 HttpContext.Current.Response.Write("<script>alert('validity true Added product " + Insertname.Text + "')</script>");
-
+                
                 try
                 {
+                    try
+                    {
+                        string fileName = Path.GetFileName(insertImageFile.PostedFile.FileName);
+                        insertImageFile.PostedFile.SaveAs(Server.MapPath("~/images/") + fileName);
+                        uploadPicture.Text =  fileName;
+                    }
+                    catch { 
+                        HttpContext.Current.Response.Write("<script>alert('File upload Error')</script>");
+                        return;
+                    }
                     try
                     {
                         SqlDataSourceInsertProduct.Insert();

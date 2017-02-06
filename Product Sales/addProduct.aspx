@@ -11,7 +11,7 @@
                     <div class="col-md-6 account-left">
                         <asp:SqlDataSource ID="SqlDataSourceInsertProduct" runat="server" ConflictDetection="CompareAllValues"
                             ConnectionString="<%$ ConnectionStrings:tproductSalesConnectionLocalhost %>"
-                            InsertCommand="INSERT INTO products(name, price, color, size, catogory, brand, description, rate, tag, sku, discount, infomation) VALUES (@name, @price, @color, @size, @catogory, @brand, @description, @rate, @tag, @sku, @discount, @information)"
+                            InsertCommand="INSERT INTO products(name, price, color, size, catogory, brand, description, rate, tag, sku, discount, infomation, picture) VALUES (@name, @price, @color, @size, @catogory, @brand, @description, @rate, @tag, @sku, @discount, @information , @picture)"
                             OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT products.* FROM products">
                             <InsertParameters>
                                 <asp:ControlParameter Name="name" ControlID="Insertname" Type="String" />
@@ -26,6 +26,8 @@
                                 <asp:ControlParameter Name="sku" ControlID="Insertsku" Type="String" />
                                 <asp:ControlParameter Name="discount" ControlID="Insertdiscount" Type="Int32" />
                                 <asp:ControlParameter Name="information" ControlID="insertinformation" Type="String" />
+                                <asp:ControlParameter Name="picture" ControlID="uploadPicture" Type="String" />
+
                             </InsertParameters>
                         </asp:SqlDataSource>
 
@@ -44,6 +46,9 @@
                         <asp:TextBox ID="Insertrate" required placeholder="Rate" TabIndex="10" runat="server"></asp:TextBox>
                         <asp:TextBox ID="Inserttag" required placeholder="Tag" TabIndex="11" runat="server"></asp:TextBox>
                         <asp:TextBox ID="Insertsku" placeholder="SKU" TabIndex="12" runat="server"  ></asp:TextBox>
+                        <asp:Label   ID="uploadPicture" placeholder="uploadPicture"  text="" TabIndex="13" runat="server"  >Upload Product Image </asp:Label>
+                        <asp:FileUpload ID="insertImageFile"  runat="server"/>
+                        
                     </div>
 
                     <div class="address submit">
