@@ -13,6 +13,19 @@ namespace Product_Sales
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(!String.IsNullOrEmpty(Request.QueryString["logout"]))
+            {
+                if(String.IsNullOrEmpty(Session["login"].ToString()))
+                {
+
+                } else
+                {
+                    HttpContext.Current.Response.Write("<script>alert('Logout success!')</script>");
+                    Session.Remove("Login");
+                    Session.Remove("UserName");
+                    Session.Remove("FirstName");
+                }
+            }
             SqlConnection conn = new SqlConnection("Initial Catalog=ProductSales;Data Source=.;Integrated Security=true");
             String sql = "select * from products";
             SqlDataAdapter sda = new SqlDataAdapter(sql, conn);
