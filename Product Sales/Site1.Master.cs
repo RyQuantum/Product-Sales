@@ -19,6 +19,14 @@ namespace Product_Sales
                     Session["Login"] = "true";
                 }
                 Label1.Text = "Hello " + Session["FirstName"].ToString();
+                logout.Visible = true;
+                FooterLogout.Visible = true;
+                FooterLogin.Visible = false;
+            } else
+            {
+                logout.Visible = false;
+                FooterLogout.Visible = false;
+                FooterLogin.Visible = true;
             }
             
         }

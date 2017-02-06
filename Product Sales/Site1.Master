@@ -105,9 +105,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="top-header-main">
                 <div class="col-md-6 top-header-left">
                     <div class="drop">
-                        <div class="box">
+                        <div class="box" style="display:table-cell">
                             <asp:Label ID="Label1" runat="server" Text="Welcome" ForeColor="White" Width="200px"></asp:Label>
-                            <a href="index.aspx?logout=true">Logout</a>
+                            
+                        </div>
+                        <div class="box" style="display:table-cell">
+                            <a id="logout" runat="server" href="index.aspx?logout=true">Logout</a>
                         </div>
                         <div class="clearfix"></div>
                     </div>
@@ -172,10 +175,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <li><a href="register.aspx">
                             <p>Register</p>
                         </a></li>
-                        <li><a href="account.aspx">
+                        <li><a id="FooterLogin" runat="server" href="account.aspx">
                             <p>Login</p>
                         </a></li>
-                        <li><a href="#">
+                        <li><a id="FooterLogout" runat="server" href="index.aspx?logout=true">
                             <p>Logout</p>
                         </a></li>
                     </ul>

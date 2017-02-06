@@ -22,6 +22,15 @@ namespace Product_Sales {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
+        /// logout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor logout;
+        
+        /// <summary>
         /// MasterPlaceHolder control.
         /// </summary>
         /// <remarks>
@@ -29,5 +38,23 @@ namespace Product_Sales {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder MasterPlaceHolder;
+        
+        /// <summary>
+        /// FooterLogin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor FooterLogin;
+        
+        /// <summary>
+        /// FooterLogout control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor FooterLogout;
     }
 }

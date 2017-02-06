@@ -29,7 +29,7 @@ namespace Product_Sales
         {
             if (ValidateProductData() == true)
             {
-                HttpContext.Current.Response.Write("<script>alert('validity true Added product " + Insertname.Text + "')</script>");
+                //HttpContext.Current.Response.Write("<script>alert('validity true Added product " + Insertname.Text + "')</script>");
                 
                 try
                 {
@@ -82,6 +82,13 @@ namespace Product_Sales
 
         private bool ValidateProductData()
         {
+            Int32 ratevalue = Convert.ToInt32(Insertrate.Text);
+            if (ratevalue < 0)
+                ratevalue = 0;
+            else if (ratevalue > 5)
+                ratevalue = 5;
+            Insertrate.Text = ratevalue.ToString();
+
             return true;
         }
     }
