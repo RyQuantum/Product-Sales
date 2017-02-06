@@ -55,17 +55,8 @@
                     <figure class="effect-bubba">
                         <img class="img-responsive" src="images/abt-1.jpg" alt="" />
                         <figcaption>
-                            <h2>Nulla maximus nunc</h2>
-                            <p>In sit amet sapien eros Integer dolore magna aliqua</p>
-                        </figcaption>
-                    </figure>
-                </div>
-                <div class="col-md-4 about-left">
-                    <figure class="effect-bubba">
-                        <img class="img-responsive" src="images/abt-2.jpg" alt="" />
-                        <figcaption>
-                            <h4>Mauris erat augue</h4>
-                            <p>In sit amet sapien eros Integer dolore magna aliqua</p>
+                            <h2>Men's Watches</h2>
+                            <p>Find all our collection of men's luxury watches.</p>
                         </figcaption>
                     </figure>
                 </div>
@@ -73,8 +64,17 @@
                     <figure class="effect-bubba">
                         <img class="img-responsive" src="images/abt-3.jpg" alt="" />
                         <figcaption>
-                            <h4>Cras elit mauris</h4>
-                            <p>In sit amet sapien eros Integer dolore magna aliqua</p>
+                            <h4>Women's Watches</h4>
+                            <p>The best gift for women in the Valentine's Day.</p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="col-md-4 about-left">
+                    <figure class="effect-bubba">
+                        <img class="img-responsive" src="images/abt-2.jpg" alt="" />
+                        <figcaption>
+                            <h4>Kids' Watches</h4>
+                            <p>Shop Target for kids' watches you will love.</p>
                         </figcaption>
                     </figure>
                 </div>

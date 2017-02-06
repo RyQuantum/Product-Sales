@@ -14,19 +14,27 @@ namespace Product_Sales
 {
     public partial class products : System.Web.UI.Page
     {
-        static String sql = "select * from products ";
-        static String category = "";
-        static String brand = "";
-        static String color = "";
-        static String discount = "discount >= 0 ";
-        static int pageIndex = 0;
+        String sql = "select * from products ";
+        String category = "";
+        String brand = "";
+        String color = "";
+        String discount = "discount >= 0 ";
+        int pageIndex = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if(!IsPostBack)
+            {
+                sql = "select * from products ";
+                category = "";
+                brand = "";
+                color = "";
+                discount = "discount >= 0 ";
+                pageIndex = 0;
+            }
             int page = Convert.ToInt32(Request.QueryString["page"]) - 1;
             SqlConnection conn = new SqlConnection("Initial Catalog=ProductSales;Data Source=.;Integrated Security=true");
             String command = sql + "where id in ";
-            if (Request.QueryString["Search"] != null)
+            if (!String.IsNullOrEmpty(Request.QueryString["Search"]))
             {
                 String keyword = Request["Search"].ToString();
                 command += "(select id from products where name like '%" + keyword + "%' or color like '%" + keyword + "%' or size like '%" + keyword + "%' or catogory like '%" + keyword + "%' or brand like '%" + keyword + "%' or description like '%" + keyword + "%' or tag like '%" + keyword + "%')";
@@ -48,7 +56,7 @@ namespace Product_Sales
                 command += "and " + color;
             }
             System.Diagnostics.Debug.WriteLine(command);
-            Session["command"] = command;
+            //Session["command"] = command;
             SqlDataAdapter sda = new SqlDataAdapter(command, conn);
             DataSet ds = new DataSet();
             sda.Fill(ds);
