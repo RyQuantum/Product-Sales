@@ -45,9 +45,58 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
         });
     </script>
-    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+<style type="text/css">
+        .rank {
+            border: 1px solid #fff;
+            height: 100px;
+            padding: 6px 0 9px;
+            overflow: hidden;
+            cursor: pointer;
+        }
 
-    </asp:ContentPlaceHolder>
+            .rank:hover {
+                border: 1px solid #73B6E1;
+                transition: 0.5s all ease;
+                -webkit-transition: 0.5s all ease;
+                -moz-transition: 0.5s all ease;
+                -o-transition: 0.5s all ease;
+                -ms-transition: 0.5s all ease;
+            }
+
+            .rank #picture {
+                width: 60px;
+                height: 80px;
+                float: left;
+                margin-top: 3px;
+                margin-left: 15px;
+                border: 1px solid #ececec;
+            }
+            .rank .content {
+                height: 70px;
+                margin-left: 110px;
+                overflow: hidden;
+            }
+
+            .rank #name {
+                height: 25px;
+                font-size: large;
+                margin: auto;
+                overflow: hidden;
+            }
+            .rank #brand {
+                height: 30px;
+                margin: auto;
+                overflow: hidden;
+                font-size: small;
+                font-family: monospace;
+            }
+            .rank #price {
+                height: 18px;
+                line-height: 18px;
+                padding-top: 8px;
+                overflow: hidden;
+            }
+    </style>
 </head>
 <body>
         <!--top-header-->
@@ -84,178 +133,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <h1>Luxury Watches</h1>
             </a>
         </div>
-        <!--start-logo-->
-        <!--bottom-header-->
-        <div class="header-bottom">
-            <div class="container">
-                <div class="header">
-                    <div class="col-md-9 header-left">
-                        <div class="top-nav">
-                            <ul class="memenu skyblue">
-                                <li class="active"><a href="index.aspx">Home</a></li>
-                                <li class="grid"><a href="#">Men</a>
-                                    <div class="mepanel">
-                                        <div class="row">
-                                            <div class="col1 me-one">
-                                                <h4>Shop</h4>
-                                                <ul>
-                                                    <li><a href="products.aspx">New Arrivals</a></li>
-                                                    <li><a href="products.aspx">Blazers</a></li>
-                                                    <li><a href="products.aspx">Swem Wear</a></li>
-                                                    <li><a href="products.aspx">Accessories</a></li>
-                                                    <li><a href="products.aspx">Handbags</a></li>
-                                                    <li><a href="products.aspx">T-Shirts</a></li>
-                                                    <li><a href="products.aspx">Watches</a></li>
-                                                    <li><a href="products.aspx">My Shopping Bag</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col1 me-one">
-                                                <h4>Style Zone</h4>
-                                                <ul>
-                                                    <li><a href="products.aspx">Shoes</a></li>
-                                                    <li><a href="products.aspx">Watches</a></li>
-                                                    <li><a href="products.aspx">Brands</a></li>
-                                                    <li><a href="products.aspx">Coats</a></li>
-                                                    <li><a href="products.aspx">Accessories</a></li>
-                                                    <li><a href="products.aspx">Trousers</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col1 me-one">
-                                                <h4>Popular Brands</h4>
-                                                <ul>
-                                                    <li><a href="products.aspx">499 Store</a></li>
-                                                    <li><a href="products.aspx">Fastrack</a></li>
-                                                    <li><a href="products.aspx">Casio</a></li>
-                                                    <li><a href="products.aspx">Fossil</a></li>
-                                                    <li><a href="products.aspx">Maxima</a></li>
-                                                    <li><a href="products.aspx">Timex</a></li>
-                                                    <li><a href="products.aspx">TomTom</a></li>
-                                                    <li><a href="products.aspx">Titan</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="grid"><a href="#">Women</a>
-                                    <div class="mepanel">
-                                        <div class="row">
-                                            <div class="col1 me-one">
-                                                <h4>Shop</h4>
-                                                <ul>
-                                                    <li><a href="products.aspx">New Arrivals</a></li>
-                                                    <li><a href="products.aspx">Blazers</a></li>
-                                                    <li><a href="products.aspx">Swem Wear</a></li>
-                                                    <li><a href="products.aspx">Accessories</a></li>
-                                                    <li><a href="products.aspx">Handbags</a></li>
-                                                    <li><a href="products.aspx">T-Shirts</a></li>
-                                                    <li><a href="products.aspx">Watches</a></li>
-                                                    <li><a href="products.aspx">My Shopping Bag</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col1 me-one">
-                                                <h4>Style Zone</h4>
-                                                <ul>
-                                                    <li><a href="products.aspx">Shoes</a></li>
-                                                    <li><a href="products.aspx">Watches</a></li>
-                                                    <li><a href="products.aspx">Brands</a></li>
-                                                    <li><a href="products.aspx">Coats</a></li>
-                                                    <li><a href="products.aspx">Accessories</a></li>
-                                                    <li><a href="products.aspx">Trousers</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col1 me-one">
-                                                <h4>Popular Brands</h4>
-                                                <ul>
-                                                    <li><a href="products.aspx">499 Store</a></li>
-                                                    <li><a href="products.aspx">Fastrack</a></li>
-                                                    <li><a href="products.aspx">Casio</a></li>
-                                                    <li><a href="products.aspx">Fossil</a></li>
-                                                    <li><a href="products.aspx">Maxima</a></li>
-                                                    <li><a href="products.aspx">Timex</a></li>
-                                                    <li><a href="products.aspx">TomTom</a></li>
-                                                    <li><a href="products.aspx">Titan</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="grid"><a href="#">Kids</a>
-                                    <div class="mepanel">
-                                        <div class="row">
-                                            <div class="col1 me-one">
-                                                <h4>Shop</h4>
-                                                <ul>
-                                                    <li><a href="products.aspx">New Arrivals</a></li>
-                                                    <li><a href="products.aspx">Blazers</a></li>
-                                                    <li><a href="products.aspx">Swem Wear</a></li>
-                                                    <li><a href="products.aspx">Accessories</a></li>
-                                                    <li><a href="products.aspx">Handbags</a></li>
-                                                    <li><a href="products.aspx">T-Shirts</a></li>
-                                                    <li><a href="products.aspx">Watches</a></li>
-                                                    <li><a href="products.aspx">My Shopping Bag</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col1 me-one">
-                                                <h4>Style Zone</h4>
-                                                <ul>
-                                                    <li><a href="products.aspx">Shoes</a></li>
-                                                    <li><a href="products.aspx">Watches</a></li>
-                                                    <li><a href="products.aspx">Brands</a></li>
-                                                    <li><a href="products.aspx">Coats</a></li>
-                                                    <li><a href="products.aspx">Accessories</a></li>
-                                                    <li><a href="products.aspx">Trousers</a></li>
-                                                </ul>
-                                            </div>
-                                            <div class="col1 me-one">
-                                                <h4>Popular Brands</h4>
-                                                <ul>
-                                                    <li><a href="products.aspx">499 Store</a></li>
-                                                    <li><a href="products.aspx">Fastrack</a></li>
-                                                    <li><a href="products.aspx">Casio</a></li>
-                                                    <li><a href="products.aspx">Fossil</a></li>
-                                                    <li><a href="products.aspx">Maxima</a></li>
-                                                    <li><a href="products.aspx">Timex</a></li>
-                                                    <li><a href="products.aspx">TomTom</a></li>
-                                                    <li><a href="products.aspx">Titan</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="grid"><a href="typo.aspx">Blog</a>
-                                </li>
-                                <li class="grid"><a href="contact.aspx">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <div class="col-md-3 header-right">
-                        <form class="search-bar" action="products.aspx" method="get">
-                            <input type="text" value="Search" name="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
-                            <input type="submit" value="">
-                        </form>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-            </div>
-        </div>
-        <!--bottom-header-->
-        <!--start-breadcrumbs-->
-        <div class="breadcrumbs">
-            <div class="container">
-                <div class="breadcrumbs-main">
-                    <ol class="breadcrumb">
-                        <li><a href="index.aspx">Home</a></li>
-                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-                        </asp:ContentPlaceHolder>
-                    </ol>
-                </div>
-            </div>
-        </div>
-        <!--end-breadcrumbs-->
-        <!--start-single-->
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        <asp:ContentPlaceHolder ID="MasterPlaceHolder" runat="server">
         </asp:ContentPlaceHolder>
         <!--end-single-->
         <!--information-starts-->
