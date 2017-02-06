@@ -38,9 +38,51 @@ namespace Product_Sales
             {
                 String keyword = Request["Search"].ToString();
                 command += "(select id from products where name like '%" + keyword + "%' or color like '%" + keyword + "%' or size like '%" + keyword + "%' or catogory like '%" + keyword + "%' or brand like '%" + keyword + "%' or description like '%" + keyword + "%' or tag like '%" + keyword + "%')";
-            } else
+            } else if (!String.IsNullOrEmpty(Request.QueryString["Category"]))
             {
-                command += "(select id from products)";
+                String category = Request.QueryString["Category"].ToString();
+                command += "(select id from products where catogory = '" + category + "')";
+                All.Checked = Men.Checked = Women.Checked = Kids.Checked = false;
+                switch (category)
+                {
+                    case "Men":
+                        Men.Checked = true;
+                        break;
+                    case "Women":
+                        Women.Checked = true;
+                        break;
+                    case "Kids":
+                        Kids.Checked = true;
+                        break;
+                }
+            }
+            else 
+            {
+                if(!String.IsNullOrEmpty(Request.QueryString["Type"]) ){
+                    command += "(select id from products where tag like '%"+ Request.QueryString["Type"].ToString() + "%')";
+                } else if (!String.IsNullOrEmpty(Request.QueryString["Brand"])) {
+                    command += "(select id from products where brand like '%" + Request.QueryString["Brand"].ToString() + "%')";
+                } else if (!String.IsNullOrEmpty(Request.QueryString["Price"])) {
+                    String level = Request.QueryString["Price"].ToString();
+                    switch (level)
+                    {
+                        case "lvl1":
+                            command += "(select id from products where price < 2000)";
+                            break;
+                        case "lvl2":
+                            command += "(select id from products where price >= 2000 and price < 5000)";
+                            break;
+                        case "lvl3":
+                            command += "(select id from products where price >= 5000 and price < 10000)";
+                            break;
+                        case "lvl4":
+                            command += "(select id from products where price >= 10000)";
+                            break;
+                    }
+                } else
+                {
+                    command += "(select id from products)";
+                }
             }
             command += "and " + discount;
             if (category != "")

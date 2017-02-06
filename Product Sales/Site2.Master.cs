@@ -9,9 +9,10 @@ namespace Product_Sales
 {
     public partial class Site2 : System.Web.UI.MasterPage
     {
+        protected String url;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            url = Request.Url.LocalPath;
         }
     }
 }
