@@ -49,15 +49,6 @@ namespace Product_Sales {
         protected global::System.Web.UI.WebControls.TextBox Insertprice;
         
         /// <summary>
-        /// Insertdiscount control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Insertdiscount;
-        
-        /// <summary>
         /// Insertcolor control.
         /// </summary>
         /// <remarks>
@@ -103,13 +94,22 @@ namespace Product_Sales {
         protected global::System.Web.UI.WebControls.TextBox Insertdescription;
         
         /// <summary>
-        /// Insertinfomation control.
+        /// insertinformation control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Insertinfomation;
+        protected global::System.Web.UI.WebControls.TextBox insertinformation;
+        
+        /// <summary>
+        /// Insertdiscount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox Insertdiscount;
         
         /// <summary>
         /// Insertrate control.
@@ -119,24 +119,6 @@ namespace Product_Sales {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Insertrate;
-        
-        /// <summary>
-        /// InsertnumOfRate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox InsertnumOfRate;
-        
-        /// <summary>
-        /// Insertreviews control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Insertreviews;
         
         /// <summary>
         /// Inserttag control.

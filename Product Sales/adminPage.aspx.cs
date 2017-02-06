@@ -12,13 +12,13 @@ namespace Product_Sales
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if ((String)Session["isAdmin"] == "true")
+            if ((String)Session["isAdmin"] == "Y")
             {
                 //success
             }
             else
             {
-                Response.Redirect("adminLogin.aspx");
+                Response.Redirect("accounts.aspx");
             }
         }
         protected void Button1_Click(object sender, EventArgs e)

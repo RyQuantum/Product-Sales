@@ -1,8 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="adminLogin.aspx.cs" Inherits="Product_Sales.adminLogin" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-    <li class="active">Admin Login</li>
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.master" AutoEventWireup="true" CodeBehind="adminLogin.aspx.cs" Inherits="Product_Sales.adminLogin" %>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="AdminPagesPlaceHolder" runat="server">
     <div class="account">
         <div class="container">
             <div class="account-top heading">

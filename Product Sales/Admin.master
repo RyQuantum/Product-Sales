@@ -1,6 +1,6 @@
 ﻿<%@ Master Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Product_Sales.Admin" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="MasterPlaceHolder" runat="server">
     <!--bottom-header-->
     <div class="header-bottom">
         <div class="container">
@@ -8,16 +8,14 @@
                 <div class="col-md-9 header-left">
                     <div class="top-nav">
                         <ul class="memenu skyblue">
-                            <li class="active"><a href="adminPage.aspx">Home</a></li>
+                            <li class="active"><a href="index.aspx">Home</a></li>
                             <li class="grid"><a href="#">Users</a>
                                 <div class="mepanel">
-                                    <div class="row">
-                                        <div class="col1 me-one">
-                                            <ul>
-                                                <li><a href="addUser.aspx">Add New User</a></li>
-                                                <li><a href="editUser.aspx">Modify Users</a></li>
-                                            </ul>
-                                        </div>
+                                    <div class="col1 me-one">
+                                        <ul>
+                                            <li><a href="addUser.aspx">Add New User</a></li>
+                                            <li><a href="editUser.aspx">Modify Users</a></li>
+                                        </ul>
                                     </div>
                                 </div>
                             </li>
@@ -25,41 +23,16 @@
                                 <div class="mepanel">
                                     <div class="row">
                                         <div class="col1 me-one">
-                                            <h4>Shop</h4>
                                             <ul>
                                                 <li><a href="addProduct.aspx">Add New Product</a></li>
                                                 <li><a href="editProduct.aspx">Modify Products</a></li>
                                             </ul>
                                         </div>
-                                        <div class="col1 me-one">
-                                            <h4>Style Zone</h4>
-                                            <ul>
-                                                <li><a href="products.aspx">Shoes</a></li>
-                                                <li><a href="products.aspx">Watches</a></li>
-                                                <li><a href="products.aspx">Brands</a></li>
-                                                <li><a href="products.aspx">Coats</a></li>
-                                                <li><a href="products.aspx">Accessories</a></li>
-                                                <li><a href="products.aspx">Trousers</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="col1 me-one">
-                                            <h4>Popular Brands</h4>
-                                            <ul>
-                                                <li><a href="products.aspx">499 Store</a></li>
-                                                <li><a href="products.aspx">Fastrack</a></li>
-                                                <li><a href="products.aspx">Casio</a></li>
-                                                <li><a href="products.aspx">Fossil</a></li>
-                                                <li><a href="products.aspx">Maxima</a></li>
-                                                <li><a href="products.aspx">Timex</a></li>
-                                                <li><a href="products.aspx">TomTom</a></li>
-                                                <li><a href="products.aspx">Titan</a></li>
-                                            </ul>
-                                        </div>
                                     </div>
                                 </div>
                             </li>
-                            <li class="active"><a href="index.aspx">MainPage</a></li>
-                            <li class="grid"><a href="logout.aspx">Logout</a>
+                            <li class="active"><a href="adminPage.aspx"><%--Admin--%></a></li>
+                            <li class="active"><a href="logout.aspx">Logout</a>
                             </li>
                         </ul>
                     </div>
@@ -70,4 +43,6 @@
         </div>
     </div>
     <!--bottom-header-->
+    <asp:ContentPlaceHolder ID="AdminPagesPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
 </asp:Content>

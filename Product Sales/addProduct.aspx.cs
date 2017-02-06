@@ -23,31 +23,54 @@ namespace Product_Sales
 
 
         }
-        protected void Binsert_Click(object sender, EventArgs e) 
+        protected void Binsert_Click(object sender, EventArgs e)
         {
-            try
+            if (ValidateProductData() == true)
             {
-                SqlDataSourceInsertProduct.Insert();
-                HttpContext.Current.Response.Write("<script>alert('Successfully Added product " + Insertname.Text + "')</script>");
-                Insertname.Text = "";
-                Insertprice.Text = "";
-                Insertdiscount.Text = "";
-                Insertcolor.Text = "";
-                Insertsize.Text = "";
-                Insertcatogory.Text = "";
-                Insertbrand.Text = "";
-                Insertdescription.Text = "";
-                Insertinfomation.Text = "";
-                Insertrate.Text = "";
-                InsertnumOfRate.Text = "";
-                Insertreviews.Text = "";
-                Inserttag.Text = "";
-                Insertsku.Text = "";
+                HttpContext.Current.Response.Write("<script>alert('validity true Added product " + Insertname.Text + "')</script>");
+
+                try
+                {
+                    try
+                    {
+                        SqlDataSourceInsertProduct.Insert();
+                    }
+                    catch
+                    {
+                        HttpContext.Current.Response.Write("<script>alert('SQL Error Added product " + Insertname.Text + "')</script>");
+                        return;
+                    }
+                    HttpContext.Current.Response.Write("<script>alert('Successfully Added product " + Insertname.Text + "')</script>");
+                    Insertname.Text = "";
+                    Insertprice.Text = "";
+                    Insertdiscount.Text = "";
+                    Insertcolor.Text = "";
+                    Insertsize.Text = "";
+                    Insertcatogory.Text = "";
+                    Insertbrand.Text = "";
+                    Insertdescription.Text = "";
+                    insertinformation.Text = "";
+                    Insertrate.Text = "";
+                    Inserttag.Text = "";
+                    Insertsku.Text = "";
+                }
+                catch (Exception err)
+                {
+
+                    HttpContext.Current.Response.Write("<script>alert('Not able to Added product " + Insertname.Text + "\n" + err.Message + "')</script>");
+                    return;
+                }
             }
-            catch{
-                HttpContext.Current.Response.Write("<script>alert('Not able to Added product " + Insertname.Text + "')</script>");
+            else {
+                HttpContext.Current.Response.Write("<script>alert('Invalid inputs')</script>");
+                return;
             }
 
+        }
+
+        private bool ValidateProductData()
+        {
+            return true;
         }
     }
 }

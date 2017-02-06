@@ -1,9 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="editProduct.aspx.cs" Inherits="Product_Sales.editProduct" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.master" AutoEventWireup="true" CodeBehind="editProduct.aspx.cs" Inherits="Product_Sales.editProduct" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" runat="server">
-    <li class="active">Edit Product</li>
-</asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="AdminPagesPlaceHolder" runat="server">
     <form id="formEditProduct" runat="server">
         <div class="account">
             <div class="container">
@@ -14,7 +11,7 @@
                     <div class="col-md-6 account-left">
                         <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="userProductEdit" AllowPaging="True" AllowSorting="True">
                             <Columns>
-                                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
+                                <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                                 <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
                                 <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" />
                                 <asp:BoundField DataField="price" HeaderText="price" SortExpression="price" />
@@ -33,7 +30,14 @@
                                 <asp:BoundField DataField="picture" HeaderText="picture" SortExpression="picture" />
                             </Columns>
                         </asp:GridView>
-                        <asp:SqlDataSource ID="userProductEdit" runat="server" ConflictDetection="CompareAllValues" ConnectionString="<%$ ConnectionStrings:tproductSalesConnectionLocalhost %>" DeleteCommand="DELETE FROM [products] WHERE [id] = @original_id AND [name] = @original_name AND [price] = @original_price AND [discount] = @original_discount AND [color] = @original_color AND [size] = @original_size AND [catogory] = @original_catogory AND [brand] = @original_brand AND [description] = @original_description AND [infomation] = @original_infomation AND [rate] = @original_rate AND [numOfRate] = @original_numOfRate AND [reviews] = @original_reviews AND [tag] = @original_tag AND [sku] = @original_sku AND [picture] = @original_picture" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [products]" UpdateCommand="UPDATE [products] SET [name] = @name, [price] = @price, [discount] = @discount, [color] = @color, [size] = @size, [catogory] = @catogory, [brand] = @brand, [description] = @description, [infomation] = @infomation, [rate] = @rate, [numOfRate] = @numOfRate, [reviews] = @reviews, [tag] = @tag, [sku] = @sku, [picture] = @picture WHERE [id] = @original_id AND [name] = @original_name AND [price] = @original_price AND [discount] = @original_discount AND [color] = @original_color AND [size] = @original_size AND [catogory] = @original_catogory AND [brand] = @original_brand AND [description] = @original_description AND [infomation] = @original_infomation AND [rate] = @original_rate AND [numOfRate] = @original_numOfRate AND [reviews] = @original_reviews AND [tag] = @original_tag AND [sku] = @original_sku AND [picture] = @original_picture">
+                        <asp:SqlDataSource ID="userProductEdit"
+                            runat="server"
+                            ConflictDetection="CompareAllValues"
+                            ConnectionString="<%$ ConnectionStrings:tproductSalesConnectionLocalhost %>"
+                            DeleteCommand="DELETE FROM [products] WHERE [id] = @original_id AND [name] = @original_name AND [price] = @original_price AND [discount] = @original_discount AND [color] = @original_color AND [size] = @original_size AND [catogory] = @original_catogory AND [brand] = @original_brand AND [description] = @original_description AND [infomation] = @original_infomation AND [rate] = @original_rate AND [numOfRate] = @original_numOfRate AND [reviews] = @original_reviews AND [tag] = @original_tag AND [sku] = @original_sku AND [picture] = @original_picture"
+                            OldValuesParameterFormatString="original_{0}"
+                            SelectCommand="SELECT * FROM [products]"
+                            UpdateCommand="UPDATE [products] SET [name] = @name, [price] = @price, [discount] = @discount, [color] = @color, [size] = @size, [catogory] = @catogory, [brand] = @brand, [description] = @description, [infomation] = @infomation, [rate] = @rate, [numOfRate] = @numOfRate, [reviews] = @reviews, [tag] = @tag, [sku] = @sku, [picture] = @picture WHERE [id] = @original_id AND [name] = @original_name AND [price] = @original_price AND [discount] = @original_discount AND [color] = @original_color AND [size] = @original_size AND [catogory] = @original_catogory AND [brand] = @original_brand AND [description] = @original_description AND [infomation] = @original_infomation AND [rate] = @original_rate AND [numOfRate] = @original_numOfRate AND [reviews] = @original_reviews AND [tag] = @original_tag AND [sku] = @original_sku AND [picture] = @original_picture">
                             <DeleteParameters>
                                 <asp:Parameter Name="original_id" Type="Int32" />
                                 <asp:Parameter Name="original_name" Type="String" />
