@@ -15,7 +15,7 @@ namespace Product_Sales
         {
             if(!String.IsNullOrEmpty(Request.QueryString["logout"]))
             {
-                if(String.IsNullOrEmpty(Session["login"].ToString()))
+                if(Session["login"] == null)
                 {
                     HttpContext.Current.Response.Write("<script>alert('Error! You have already log out.')</script>");
                 } else

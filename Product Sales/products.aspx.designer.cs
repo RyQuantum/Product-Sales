@@ -94,58 +94,67 @@ namespace Product_Sales {
         protected global::System.Web.UI.WebControls.CheckBox Kids;
         
         /// <summary>
-        /// Kurtas control.
+        /// Fossil control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox Kurtas;
+        protected global::System.Web.UI.WebControls.CheckBox Fossil;
         
         /// <summary>
-        /// Sonata control.
+        /// Anne Klein control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox Sonata;
+        protected global::System.Web.UI.WebControls.CheckBox AnneKlein;
         
         /// <summary>
-        /// Titan control.
+        /// Tissot control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox Titan;
+        protected global::System.Web.UI.WebControls.CheckBox Tissot;
         
         /// <summary>
-        /// Casio control.
+        /// Omega control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox Casio;
+        protected global::System.Web.UI.WebControls.CheckBox Omega;
         
         /// <summary>
-        /// Omax control.
+        /// Bulova control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox Omax;
+        protected global::System.Web.UI.WebControls.CheckBox Bulova;
         
         /// <summary>
-        /// Shree control.
+        /// Guess control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox Shree;
+        protected global::System.Web.UI.WebControls.CheckBox Guess;
+        
+        /// <summary>
+        /// Disney control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox Disney;
         
         /// <summary>
         /// Pink control.
@@ -202,13 +211,13 @@ namespace Product_Sales {
         protected global::System.Web.UI.WebControls.LinkButton Black;
         
         /// <summary>
-        /// While control.
+        /// Silver control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton While;
+        protected global::System.Web.UI.WebControls.LinkButton Silver;
         
         /// <summary>
         /// Discount0 control.

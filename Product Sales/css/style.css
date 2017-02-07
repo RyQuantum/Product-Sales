@@ -694,6 +694,7 @@ img.zoom-img {
     -moz-transition-timing-function: ease-out;
     -moz-transition-duration: 250ms;
 	margin: 0 auto;
+    max-height: 200px;
 }
 .product-left:hover img.zoom-img{
     -webkit-transform: scale(1.05);
@@ -1764,7 +1765,7 @@ ul {
 .menu_drop ul li a {
 	background: #fff;
 	width: 100%;
-	height: 5em;
+	height: 10em;
 	line-height: 1.8em;
 	display: block;
 	position: relative;
