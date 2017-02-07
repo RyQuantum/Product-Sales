@@ -15,7 +15,7 @@
                                     <div class="col-md-4 product-left p-left">
                                         <div class="product-main simpleCart_shelfItem">
                                             <a href="single.aspx?id=<%#Eval("id") %>" class="mask">
-                                                <img class="img-responsive zoom-img" src="images/<%#Eval("picture") %>" alt="" /></a>
+                                                <img class="img-responsive zoom-img" src="images/<%#Eval("picture").ToString().Split(',')[0]+".jpg" %>" alt="" /></a>
                                             <div class="product-bottom">
                                                 <h3><%#Eval("name") %></h3>
                                                 <p>Explore Now</p>
@@ -70,20 +70,20 @@
                                 <div class="row1 row2 scroll-pane">
                                     <div class="col col-4">
                                         <label class="checkbox">
-                                            <asp:CheckBox ID="Kurtas" runat="server" AutoPostBack="True" OnCheckedChanged="BrandChanged"/><i></i>Kurtas</label>
+                                            <asp:CheckBox ID="Fossil" runat="server" AutoPostBack="True" OnCheckedChanged="BrandChanged"/><i></i>Fossil</label>
                                         <label class="checkbox">
-                                            <asp:CheckBox ID="Sonata" runat="server" AutoPostBack="True" OnCheckedChanged="BrandChanged"/><i></i>Sonata</label>
+                                            <asp:CheckBox ID="AnneKlein" runat="server" AutoPostBack="True" OnCheckedChanged="BrandChanged"/><i></i>Anne Klein</label>
                                         <label class="checkbox">
-                                            <asp:CheckBox ID="Titan" runat="server" AutoPostBack="True" OnCheckedChanged="BrandChanged"/><i></i>Titan</label>
+                                            <asp:CheckBox ID="Tissot" runat="server" AutoPostBack="True" OnCheckedChanged="BrandChanged"/><i></i>Tissot</label>
                                         <label class="checkbox">
-                                            <asp:CheckBox ID="Casio" runat="server" AutoPostBack="True" OnCheckedChanged="BrandChanged"/><i></i>Casio</label>
+                                            <asp:CheckBox ID="Omega" runat="server" AutoPostBack="True" OnCheckedChanged="BrandChanged"/><i></i>Omega</label>
                                         <label class="checkbox">
-                                            <asp:CheckBox ID="Omax" runat="server" AutoPostBack="True" OnCheckedChanged="BrandChanged"/><i></i>Omax</label>
+                                            <asp:CheckBox ID="Bulova" runat="server" AutoPostBack="True" OnCheckedChanged="BrandChanged"/><i></i>Bulova</label>
                                         <label class="checkbox">
-                                            <asp:CheckBox ID="Shree" runat="server" AutoPostBack="True" OnCheckedChanged="BrandChanged"/><i></i>Shree</label>
+                                            <asp:CheckBox ID="Guess" runat="server" AutoPostBack="True" OnCheckedChanged="BrandChanged"/><i></i>Guess</label>
+                                        <label class="checkbox">
+                                            <asp:CheckBox ID="Disney" runat="server" AutoPostBack="True" OnCheckedChanged="BrandChanged"/><i></i>Disney</label>
                                         <%--<label class="checkbox">
-                                            <input type="checkbox" name="checkbox"><i></i>Fastrack</label>
-                                        <label class="checkbox">
                                             <input type="checkbox" name="checkbox"><i></i>Sports</label>
                                         <label class="checkbox">
                                             <input type="checkbox" name="checkbox"><i></i>Fossil</label>
@@ -107,7 +107,7 @@
                                     <li><asp:LinkButton Class="color4" ID="Blue" runat="server" OnClick="ColorClick"></asp:LinkButton></li>
                                     <li><asp:LinkButton Class="color5" ID="Red" runat="server" OnClick="ColorClick"></asp:LinkButton></li>
                                     <li><asp:LinkButton Class="color6" ID="Black" runat="server" OnClick="ColorClick"></asp:LinkButton></li>
-                                    <li><asp:LinkButton Class="color7" ID="While" runat="server" OnClick="ColorClick"></asp:LinkButton></li>
+                                    <li><asp:LinkButton Class="color7" ID="Silver" runat="server" OnClick="ColorClick"></asp:LinkButton></li>
                                     <%--<li><a class="color2" href="#"></a></li>
                                     <li><a class="color3" href="#"></a></li>
                                     <li><a class="color4" href="#"></a></li>

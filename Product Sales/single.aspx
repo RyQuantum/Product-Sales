@@ -16,19 +16,19 @@
                         <div class="col-md-5 single-top-left">
                             <div class="flexslider">
                                 <ul class="slides">
-                                    <li data-thumb="images/s-1.jpg">
+                                    <li data-thumb="images/<%=picture.Split(',')[0]+".jpg" %>">
                                         <div class="thumb-image">
-                                            <img src="images/s-1.jpg" data-imagezoom="true" class="img-responsive" alt="" />
+                                            <img src="images/<%=picture.Split(',')[0]+".jpg" %>" data-imagezoom="true" class="img-responsive" alt="" />
                                         </div>
                                     </li>
-                                    <li data-thumb="images/s-2.jpg">
+                                    <li data-thumb="images/<%=picture.Split(',')[1]+".jpg" %>">
                                         <div class="thumb-image">
-                                            <img src="images/s-2.jpg" data-imagezoom="true" class="img-responsive" alt="" />
+                                            <img src="images/<%=picture.Split(',')[1]+".jpg" %>" data-imagezoom="true" class="img-responsive" alt="" />
                                         </div>
                                     </li>
-                                    <li data-thumb="images/s-3.jpg">
+                                    <li data-thumb="images/<%=picture.Split(',')[2]+".jpg" %>">
                                         <div class="thumb-image">
-                                            <img src="images/s-3.jpg" data-imagezoom="true" class="img-responsive" alt="" />
+                                            <img src="images/<%=picture.Split(',')[2]+".jpg" %>" data-imagezoom="true" class="img-responsive" alt="" />
                                         </div>
                                     </li>
                                 </ul>
@@ -108,7 +108,7 @@
                                 </ul>
                             </li>
                             <li class="item3"><a href="#">
-                                <img src="images/arrow.png" alt="">Reviews (10)</a>
+                                <img src="images/arrow.png" alt="">Reviews (1)</a>
                                 <ul>
                                     <li class="subitem1"><a href="#"><%=reviews %></a></li>
                                 </ul>
@@ -127,7 +127,7 @@
                                         <div class="rank">
                                       
                                         <a href="single.aspx?id=<%#Eval("id") %>"  >
-                                                <img id="picture" src="images/<%#Eval("picture") %>" alt="" /></a>
+                                                <img id="picture" src="images/<%#Eval("picture").ToString().Split(',')[0]+".jpg" %>" alt="" /></a>
                                         <div class="content">
                                             <p id="name">
                                                 <%#Eval("name") %>

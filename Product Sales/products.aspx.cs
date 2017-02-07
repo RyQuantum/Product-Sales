@@ -31,6 +31,13 @@ namespace Product_Sales
                 discount = "discount >= 0 ";
                 pageIndex = 0;
             }
+            else
+            {
+                CategoryChanged(sender, e);
+                BrandChanged(sender, e);
+                discount = Session["discount"] == null ? discount : Session["discount"].ToString();
+                color = Session["color"] == null ? color : Session["color"].ToString();
+            }
             int page = Convert.ToInt32(Request.QueryString["page"]) - 1;
             SqlConnection conn = new SqlConnection("Initial Catalog=ProductSales;Data Source=.;Integrated Security=true");
             String command = sql + "where id in ";
@@ -67,16 +74,16 @@ namespace Product_Sales
                     switch (level)
                     {
                         case "lvl1":
-                            command += "(select id from products where price < 2000)";
+                            command += "(select id from products where price < 200)";
                             break;
                         case "lvl2":
-                            command += "(select id from products where price >= 2000 and price < 5000)";
+                            command += "(select id from products where price >= 200 and price < 1000)";
                             break;
                         case "lvl3":
-                            command += "(select id from products where price >= 5000 and price < 10000)";
+                            command += "(select id from products where price >=1000 and price < 2000)";
                             break;
                         case "lvl4":
-                            command += "(select id from products where price >= 10000)";
+                            command += "(select id from products where price >= 2000)";
                             break;
                     }
                 } else
@@ -98,6 +105,7 @@ namespace Product_Sales
                 command += "and " + color;
             }
             System.Diagnostics.Debug.WriteLine(command);
+            System.Diagnostics.Debug.WriteLine(category);
             //Session["command"] = command;
             SqlDataAdapter sda = new SqlDataAdapter(command, conn);
             DataSet ds = new DataSet();
@@ -149,58 +157,61 @@ namespace Product_Sales
             {
                 category = "";
             }
-            Page_Load(sender, e);
         }
 
         protected void BrandChanged(object sender, EventArgs e)
         {
             brand = "";
-            if (Kurtas.Checked)
+            if (Fossil.Checked)
             {
-                brand += "brand = 'Women' or ";
+                brand += "brand = 'Fossil' or ";
             }
-            if (Sonata.Checked)
+            if (AnneKlein.Checked)
             {
-                brand += "brand = 'Sonata' or ";
+                brand += "brand = 'Anne Klein' or ";
             }
-            if (Titan.Checked)
+            if (Tissot.Checked)
             {
-                brand += "brand = 'Titan' or ";
+                brand += "brand = 'Tissot' or ";
             }
-            if (Casio.Checked)
+            if (Omega.Checked)
             {
-                brand += "brand = 'Casio' or ";
+                brand += "brand = 'Omega' or ";
             }
-            if (Omax.Checked)
+            if (Bulova.Checked)
             {
-                brand += "brand = 'Omax' or ";
+                brand += "brand = 'Bulova' or ";
             }
-            if (Shree.Checked)
+            if (Guess.Checked)
             {
-                brand += "brand = 'Shree' or ";
+                brand += "brand = 'Guess' or ";
+            }
+            if (Disney.Checked)
+            {
+                brand += "brand = 'Disney' or ";
             }
             if (brand.Length > 0)
             {
                 brand = brand.Substring(0, brand.Length - 3);
             }
-            Page_Load(sender, e);
         }
 
         protected void ColorClick(object sender, EventArgs e)
         {
             color = "color like '%" + ((LinkButton)sender).ID + "%' ";
+            Session["color"] = color;
             Page_Load(sender, e);
         }
 
         protected void DiscountChanged(object sender, EventArgs e)
         {
             discount = "discount >=" + ((RadioButton)sender).ID.Substring(8) + " ";
+            Session["discount"] = discount;
             Page_Load(sender, e);
         }
         
         protected void PageClick(object sender, EventArgs e)
         {
-            System.Diagnostics.Debug.WriteLine(((LinkButton)sender).ID);
             var page = ((LinkButton)sender).Text;
             pageIndex = Convert.ToInt32(page) - 1;
             Page_Load(sender, e);

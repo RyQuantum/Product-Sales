@@ -47,35 +47,40 @@
     </script>
     <!--End-slider-script-->
     <!--about-starts-->
-    <div class="copyrights">Collect from <a href="http://www.cssmoban.com/">手机网站模板</a></div>
     <div class="about">
         <div class="container">
             <div class="about-top grid-1">
                 <div class="col-md-4 about-left">
                     <figure class="effect-bubba">
                         <img class="img-responsive" src="images/abt-1.jpg" alt="" />
-                        <figcaption>
-                            <h2>Men's Watches</h2>
-                            <p>Find all our collection of men's luxury watches.</p>
-                        </figcaption>
+                        <a href="products.aspx?category=Men">
+                            <figcaption>
+                                <h2>Men's Watches</h2>
+                                <p>Find all our collection of men's luxury watches.</p>
+                            </figcaption>
+                        </a>
                     </figure>
                 </div>
                 <div class="col-md-4 about-left">
                     <figure class="effect-bubba">
                         <img class="img-responsive" src="images/abt-3.jpg" alt="" />
-                        <figcaption>
-                            <h4>Women's Watches</h4>
-                            <p>The best gift for women in the Valentine's Day.</p>
-                        </figcaption>
+                        <a href="products.aspx?category=Women">
+                            <figcaption>
+                                <h4>Women's Watches</h4>
+                                <p>The best gift for women in the Valentine's Day.</p>
+                            </figcaption>
+                        </a>
                     </figure>
                 </div>
                 <div class="col-md-4 about-left">
                     <figure class="effect-bubba">
                         <img class="img-responsive" src="images/abt-2.jpg" alt="" />
-                        <figcaption>
-                            <h4>Kids' Watches</h4>
-                            <p>Shop Target for kids' watches you will love.</p>
-                        </figcaption>
+                        <a href="products.aspx?category=Kids">
+                            <figcaption>
+                                <h4>Kids' Watches</h4>
+                                <p>Shop Target for kids' watches you will love.</p>
+                            </figcaption>
+                        </a>
                     </figure>
                 </div>
                 <div class="clearfix"></div>
@@ -93,7 +98,7 @@
                             <div class="col-md-3 product-left">
                                 <div class="product-main simpleCart_shelfItem">
                                     <a href="single.aspx?id=<%#Eval("id") %>" class="mask">
-                                        <img class="img-responsive zoom-img" src="images/<%#Eval("picture") %>" alt="" /></a>
+                                        <img class="img-responsive zoom-img" src="images/<%#Eval("picture").ToString().Split(',')[0]+".jpg" %>" alt="" /></a>
                                     <div class="product-bottom">
                                         <h3><%#Eval("name") %></h3>
                                         <p>Explore Now</p>
