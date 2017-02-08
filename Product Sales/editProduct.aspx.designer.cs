@@ -22,21 +22,21 @@ namespace Product_Sales {
         protected global::System.Web.UI.HtmlControls.HtmlForm formEditProduct;
         
         /// <summary>
-        /// GridView2 control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView2;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// userProductEdit control.
+        /// EditProductTable control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource userProductEdit;
+        protected global::System.Web.UI.WebControls.SqlDataSource EditProductTable;
     }
 }
