@@ -40,6 +40,15 @@ namespace Product_Sales {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder MasterPlaceHolder;
         
         /// <summary>
+        /// FooterRegister control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor FooterRegister;
+        
+        /// <summary>
         /// FooterLogin control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,15 @@ namespace Product_Sales {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor FooterLogin;
+        
+        /// <summary>
+        /// FooterAdmin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor FooterAdmin;
         
         /// <summary>
         /// FooterLogout control.

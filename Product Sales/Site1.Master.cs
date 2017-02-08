@@ -22,11 +22,18 @@ namespace Product_Sales
                 logout.Visible = true;
                 FooterLogout.Visible = true;
                 FooterLogin.Visible = false;
+                FooterRegister.Visible = false;
+                if (Session["isAdmin"].ToString() == "Y")
+                {
+                    FooterAdmin.Visible = true;
+                }
             } else
             {
                 logout.Visible = false;
                 FooterLogout.Visible = false;
+                FooterAdmin.Visible = false;
                 FooterLogin.Visible = true;
+                FooterRegister.Visible = true;
             }
             
         }

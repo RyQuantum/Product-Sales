@@ -13,8 +13,8 @@
                 <div class="col-md-6 account-left">
                     <h3>Existing User</h3>
                     <form runat="server" class="account-bottom">
-                        <asp:TextBox ID="UserName" placeholder="Email" TabIndex="3" runat="server"></asp:TextBox>
-                        <asp:TextBox ID="Password" placeholder="Password" TabIndex="4" runat="server" TextMode="Password"></asp:TextBox>
+                        <asp:TextBox ID="UserName" placeholder="Username" TabIndex="3" runat="server" required></asp:TextBox>
+                        <asp:TextBox ID="Password" placeholder="Password" TabIndex="4" runat="server" TextMode="Password" required></asp:TextBox>
                         &nbsp;<div class="address">
                             <a class="forgot" href="#">Forgot Your Password?</a>
                             <asp:Button ID="Login" runat="server" Text="Login" OnClick="Button1_Click" />
