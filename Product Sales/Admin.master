@@ -31,9 +31,8 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="active"><a href="adminPage.aspx"><%--Admin--%></a></li>
-                            <li class="active"><a href="logout.aspx">Logout</a>
-                            </li>
+                            <!-- <li class="active"><a href="adminPage.aspx">Admin</a></li>
+                            <li class="active"><a href="logout.aspx">Logout</a></li> -->
                         </ul>
                     </div>
                     <div class="clearfix"></div>
