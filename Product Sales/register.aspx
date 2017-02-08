@@ -14,7 +14,7 @@
                     <asp:TextBox ID="Username" placeholder="Username" TabIndex="1" runat="server" required></asp:TextBox>
                     <asp:TextBox ID="Password" placeholder="Password" type="password" TabIndex="2" runat="server" required></asp:TextBox>
                     <asp:TextBox ID="RePassword" placeholder="Retype password" type="password" TabIndex="3" runat="server" required></asp:TextBox>
-                    <asp:TextBox ID="Email" placeholder="Email" TabIndex="4" runat="server" required></asp:TextBox>
+                    <asp:TextBox ID="Email" placeholder="Email" type="email" TabIndex="4" runat="server" required></asp:TextBox>
                     <ul>
                         <li>
                             <label class="radio left">

@@ -44,9 +44,18 @@ namespace Product_Sales
                 HttpContext.Current.Response.Write("<script>alert('The passwords are not the same.')</script>");
                 return;
             }
-            cmd = new SqlCommand("insert into userlogin (username, password, lastName, firstName, sex, mobile, email, address) values('" + username + "','" + password + "','" + lastName + "', '" + firstName + "', " + sex + ", '" + mobile + "', '" + email + "', '" + address + "')", conn);
-            result = cmd.ExecuteScalar();
+            cmd = new SqlCommand("insert into userlogin (username, password, lastName, firstName, sex, mobile, email, address, isAdmin) values('" + username + "','" + password + "','" + lastName + "', '" + firstName + "', " + sex + ", '" + mobile + "', '" + email + "', '" + address + "', 'N')", conn);
+            try
+            {
+                result = cmd.ExecuteScalar();
+            }
+            catch (Exception ex)
+            {
+                HttpContext.Current.Response.Write("<script>alert('" + ex.Message +"')</script>");
+                return;
+            }
             conn.Close();
+            Response.Write("<script>alert('Register success! Please log in.');window.location.href ='account.aspx'</script>");
 
         }
     }

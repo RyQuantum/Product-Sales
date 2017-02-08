@@ -179,11 +179,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="col-md-3 infor-left">
                     <h3>My Account</h3>
                     <ul>
-                        <li><a href="register.aspx">
+                        <li><a id="FooterRegister" runat="server" href="register.aspx">
                             <p>Register</p>
                         </a></li>
                         <li><a id="FooterLogin" runat="server" href="account.aspx">
                             <p>Login</p>
+                        </a></li>
+                        <li><a id="FooterAdmin" runat="server" href="adminPage.aspx">
+                            <p>Admin</p>
                         </a></li>
                         <li><a id="FooterLogout" runat="server" href="index.aspx?logout=true">
                             <p>Logout</p>
@@ -195,7 +198,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <h4>Luuuxrious Watches,
                         <span>Group 3,</span>
                         <span>Karthik Jain, Yue Ma,</span>
-                        Qi, Qingwen.</h4>
+                        Qi Chen, Qingwen Zhu.</h4>
                     <h5>+805 123 4567</h5>
                     <p><a href="mailto:unknown@email.com">unknown@example.com</a></p>
                 </div>
