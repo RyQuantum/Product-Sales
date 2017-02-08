@@ -1,30 +1,40 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.master" AutoEventWireup="true" CodeBehind="editUser.aspx.cs" Inherits="Product_Sales.editUser" %>
 
 
-<asp:Content ID="Content2" ContentPlaceHolderID="AdminPagesPlaceHolder" runat="server">
+<asp:Content ID="Content2" ContentPlaceHolderID="AdminPagesPlaceHolder" runat="server" >
     <form id="formEditUser" runat="server">
         <div class="account">
             <div class="container">
                 <div class="account-top heading">
                     <h2>Edit Users</h2>
                 </div>
-                <div class="account-main">
+                <div class="account-main" style="overflow-x:scroll" >
                     <div class="col-md-6 account-left">
-                        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="userTableEdit" AllowPaging="True" AllowSorting="True">
+                        <asp:GridView ID="GridView1" CssClass="mydatagrid" runat="server" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="userTableEdit" AllowPaging="True" AllowSorting="True">
                             <Columns>
                                 <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-                                <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
-                                <asp:BoundField DataField="username" HeaderText="username" SortExpression="username" />
-                                <asp:BoundField DataField="password" HeaderText="password" SortExpression="password" />
-                                <asp:BoundField DataField="lastName" HeaderText="lastName" SortExpression="lastName" />
-                                <asp:BoundField DataField="firstName" HeaderText="firstName" SortExpression="firstName" />
-                                <asp:BoundField DataField="sex" HeaderText="sex" SortExpression="sex" />
-                                <asp:BoundField DataField="mobile" HeaderText="mobile" SortExpression="mobile" />
-                                <asp:BoundField DataField="email" HeaderText="email" SortExpression="email" />
-                                <asp:BoundField DataField="address" HeaderText="address" SortExpression="address" />
-                                <asp:BoundField DataField="isAdmin" HeaderText="isAdmin" SortExpression="isAdmin" />
+                                <asp:BoundField DataField="id" HeaderText="User ID" InsertVisible="False" ReadOnly="True" SortExpression="id" HeaderStyle-Wrap="False" ItemStyle-Wrap="False" FooterStyle-VerticalAlign="Top" FooterStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Top" FooterStyle-Wrap="False" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Top" />
+                                <asp:BoundField DataField="username" HeaderText="UserName" SortExpression="username" HeaderStyle-Wrap="False" ItemStyle-Wrap="False" FooterStyle-VerticalAlign="Top" FooterStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Top" FooterStyle-Wrap="False" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Top" />
+                                <asp:BoundField DataField="password" HeaderText="Password" SortExpression="password" HeaderStyle-Wrap="False" ItemStyle-Wrap="False" FooterStyle-VerticalAlign="Top" FooterStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Top" FooterStyle-Wrap="False" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Top" />
+                                <asp:BoundField DataField="lastName" HeaderText="Last Name" SortExpression="lastName" HeaderStyle-Wrap="False" ItemStyle-Wrap="False" FooterStyle-VerticalAlign="Top" FooterStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Top" FooterStyle-Wrap="False" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Top" />
+                                <asp:BoundField DataField="firstName" HeaderText="First Name" SortExpression="firstName" HeaderStyle-Wrap="False" ItemStyle-Wrap="False" FooterStyle-VerticalAlign="Top" FooterStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Top" FooterStyle-Wrap="False" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Top" />
+                                <asp:BoundField DataField="sex" HeaderText="Sex" SortExpression="sex" HeaderStyle-Wrap="False" ItemStyle-Wrap="False" FooterStyle-VerticalAlign="Top" FooterStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Top" FooterStyle-Wrap="False" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Top" />
+                                <asp:BoundField DataField="mobile" HeaderText="Mobile Number" SortExpression="mobile" HeaderStyle-Wrap="False" ItemStyle-Wrap="False" FooterStyle-VerticalAlign="Top" FooterStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Top" FooterStyle-Wrap="False" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Top" />
+                                <asp:BoundField DataField="email" HeaderText="Email" SortExpression="email" HeaderStyle-Wrap="False" ItemStyle-Wrap="False" FooterStyle-VerticalAlign="Top" FooterStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Top" FooterStyle-Wrap="False" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Top" />
+                                <asp:BoundField DataField="address" HeaderText="Billing Address" SortExpression="address" HeaderStyle-Wrap="False" ItemStyle-Wrap="False" FooterStyle-VerticalAlign="Top" FooterStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Top" FooterStyle-Wrap="False" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Top" />
+                                <asp:BoundField DataField="isAdmin" HeaderText="Administrator" SortExpression="isAdmin" HeaderStyle-Wrap="False" ItemStyle-Wrap="False" FooterStyle-VerticalAlign="Top" FooterStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center" HeaderStyle-VerticalAlign="Top" FooterStyle-Wrap="False" ItemStyle-HorizontalAlign="Center" ItemStyle-VerticalAlign="Top" />
                             </Columns>
-
+                            <AlternatingRowStyle BackColor="White" />
+                            <EditRowStyle BackColor="#2461BF" />
+                            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" HorizontalAlign="Center"/>
+                            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
+                            <RowStyle BackColor="#EFF3FB" Wrap="False" HorizontalAlign="Center" />
+                            <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                            <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                            <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                            <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                            <SortedDescendingHeaderStyle BackColor="#4870BE" />
                         </asp:GridView>
                         <asp:SqlDataSource ID="userTableEdit"
                             runat="server"
