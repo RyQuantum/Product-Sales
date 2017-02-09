@@ -30,6 +30,7 @@ namespace Product_Sales
                     Session.Remove("UserName");
                     Session.Remove("FirstName");
                     Session.Remove("isAdmin");
+                    Session.Remove("cart");
                 }
             }
             SqlConnection conn = new SqlConnection("Initial Catalog=ProductSales;Data Source=.;Integrated Security=true");

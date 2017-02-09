@@ -37,10 +37,22 @@ namespace Product_Sales
                 {
                     try
                     {
+                        string fileName = null;
                         // reading the image from disk and uploading to server
-                        string fileName = Path.GetFileName(insertImageFile.PostedFile.FileName);
-                        insertImageFile.PostedFile.SaveAs(Server.MapPath("~/images/") + fileName);
-                        uploadPicture.Text =  fileName;
+                        
+                        fileName = Path.GetFileName(FileUpload0.PostedFile.FileName);  // read file 
+                        FileUpload0.PostedFile.SaveAs(Server.MapPath("~/images/") + fileName);  // save to server
+                        uploadPicture.Text = fileName.Split('.')[0]; // store filename 
+
+                        fileName = Path.GetFileName(FileUpload1.PostedFile.FileName);  // read file 
+                        FileUpload1.PostedFile.SaveAs(Server.MapPath("~/images/") + fileName);  // save to server
+                        uploadPicture.Text = uploadPicture.Text + ',' + fileName.Split('.')[0]; // store filename 
+
+                        fileName = Path.GetFileName(FileUpload2.PostedFile.FileName);  // read file 
+                        FileUpload2.PostedFile.SaveAs(Server.MapPath("~/images/") + fileName);  // save to server
+                        uploadPicture.Text = uploadPicture.Text + ',' + fileName.Split('.')[0]; // store filename 
+
+
                     }
                     catch { 
                         HttpContext.Current.Response.Write("<script>alert('File upload Error')</script>");

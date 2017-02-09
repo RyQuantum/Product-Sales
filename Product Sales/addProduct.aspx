@@ -46,8 +46,10 @@
                         <asp:TextBox ID="Insertrate" required placeholder="Rate" TabIndex="10" runat="server"></asp:TextBox>
                         <asp:TextBox ID="Inserttag" required placeholder="Tag" TabIndex="11" runat="server"></asp:TextBox>
                         <asp:TextBox ID="Insertsku" placeholder="SKU" TabIndex="12" runat="server"  ></asp:TextBox>
-                        <asp:Label   ID="uploadPicture" placeholder="uploadPicture"  text="" TabIndex="13" runat="server"  >Upload Product Image </asp:Label>
-                        <asp:FileUpload ID="insertImageFile"  runat="server"/>
+                        <asp:Label   ID="uploadPicture" placeholder="uploadPicture"  text="" TabIndex="13" runat="server"  >Upload Product Images </asp:Label>
+                        <asp:FileUpload ID="FileUpload0" runat="server"/>
+                        <asp:FileUpload ID="FileUpload1" runat="server"/>
+                        <asp:FileUpload ID="FileUpload2" runat="server"/>
                         
                     </div>
 

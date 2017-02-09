@@ -82,7 +82,7 @@ namespace Product_Sales
             this.description = Convert.ToString(ds.Tables[0].Rows[0]["description"]);
             this.information = Convert.ToString(ds.Tables[0].Rows[0]["infomation"]);
             this.rate = Convert.ToInt32(ds.Tables[0].Rows[0]["rate"]);
-            this.numofRate = Convert.ToInt32(ds.Tables[0].Rows[0]["numofRate"]);
+           // this.numofRate = Convert.ToInt32(ds.Tables[0].Rows[0]["numofRate"]);
             this.reviews = Convert.ToString(ds.Tables[0].Rows[0]["reviews"]);
             this.tag = Convert.ToString(ds.Tables[0].Rows[0]["tag"]);
             this.sku = Convert.ToString(ds.Tables[0].Rows[0]["sku"]);

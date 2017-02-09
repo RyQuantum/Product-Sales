@@ -21,6 +21,7 @@ namespace Product_Sales
                 // if not admim redirect to login page
                 Response.Redirect("account.aspx");
             }
+        }
         protected void Button1_Click(object sender, EventArgs e)
         { }
     }
