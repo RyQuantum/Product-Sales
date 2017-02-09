@@ -7,35 +7,34 @@
                 <div class="account-top heading">
                     <h2>Edit Products</h2>
                 </div>
-                <div class="account-main">
-                    <div class="col-md-6 account-left">
-                        <!-- TODO format gridview -->
-                        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="id" DataSourceID="EditProductTable" ForeColor="#333333" GridLines="None">
-                            <AlternatingRowStyle BackColor="White" />
+                <div class="account-main" style="overflow-x:scroll" >
+                    <div class="col-md-6 account-left" >
+                        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" DataKeyNames="id" DataSourceID="EditProductTable">
                             <Columns>
                                 <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-                                <asp:BoundField DataField="id" HeaderText="id" InsertVisible="False" ReadOnly="True" SortExpression="id" />
-                                <asp:BoundField DataField="name" HeaderText="name" SortExpression="name" />
-                                <asp:BoundField DataField="price" HeaderText="price" SortExpression="price" />
-                                <asp:BoundField DataField="color" HeaderText="color" SortExpression="color" />
-                                <asp:BoundField DataField="size" HeaderText="size" SortExpression="size" />
-                                <asp:BoundField DataField="catogory" HeaderText="catogory" SortExpression="catogory" />
-                                <asp:BoundField DataField="brand" HeaderText="brand" SortExpression="brand" />
-                                <asp:BoundField DataField="description" HeaderText="description" SortExpression="description" />
-                                <asp:BoundField DataField="rate" HeaderText="rate" SortExpression="rate" />
-                                <asp:BoundField DataField="tag" HeaderText="tag" SortExpression="tag" />
-                                <asp:BoundField DataField="sku" HeaderText="sku" SortExpression="sku" />
-                                <asp:BoundField DataField="discount" HeaderText="discount" SortExpression="discount" />
-                                <asp:BoundField DataField="infomation" HeaderText="infomation" SortExpression="infomation" />
-                                <asp:BoundField DataField="numOfRate" HeaderText="numOfRate" SortExpression="numOfRate" />
-                                <asp:BoundField DataField="reviews" HeaderText="reviews" SortExpression="reviews" />
-                                <asp:BoundField DataField="picture" HeaderText="picture" SortExpression="picture" />
+                                <asp:BoundField DataField="id" HeaderText="ID" InsertVisible="False" ReadOnly="True" SortExpression="id" />
+                                <asp:BoundField DataField="name" HeaderText="Name" SortExpression="name" />
+                                <asp:BoundField DataField="price" HeaderText="Price" SortExpression="price" />
+                                <asp:BoundField DataField="color" HeaderText="Color" SortExpression="color" />
+                                <asp:BoundField DataField="size" HeaderText="Size" SortExpression="size" />
+                                <asp:BoundField DataField="catogory" HeaderText="Catogory" SortExpression="catogory" />
+                                <asp:BoundField DataField="brand" HeaderText="Brand" SortExpression="brand" />
+                                <asp:BoundField DataField="description" HeaderText="Description" SortExpression="description" />
+                                <asp:BoundField DataField="rate" HeaderText="Rating" SortExpression="rate" />
+                                <asp:BoundField DataField="tag" HeaderText="Tag" SortExpression="tag" />
+                                <asp:BoundField DataField="sku" HeaderText="SKU" SortExpression="sku" />
+                                <asp:BoundField DataField="discount" HeaderText="Discount" SortExpression="discount" />
+                                <asp:BoundField DataField="infomation" HeaderText="Infomation" SortExpression="infomation" />
+                                <asp:BoundField DataField="numOfRate" HeaderText="Rating Count" SortExpression="numOfRate" />
+                                <asp:BoundField DataField="reviews" HeaderText="Reviews" SortExpression="reviews" />
+                                <asp:BoundField DataField="picture" HeaderText="Picture Path" SortExpression="picture" />
                             </Columns>
+                            <AlternatingRowStyle BackColor="White" />
                             <EditRowStyle BackColor="#2461BF" />
                             <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-                            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" HorizontalAlign="Center"/>
                             <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-                            <RowStyle BackColor="#EFF3FB" />
+                            <RowStyle BackColor="#EFF3FB" Wrap="False" HorizontalAlign="Center" />
                             <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
                             <SortedAscendingCellStyle BackColor="#F5F7FB" />
                             <SortedAscendingHeaderStyle BackColor="#6D95E1" />
