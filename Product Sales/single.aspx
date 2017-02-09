@@ -122,27 +122,21 @@
                             <h4>Hot Watches</h4>
                             <div class="">
                                 <asp:Repeater ID="Repeater1" runat="server">
-                                     <ItemTemplate>
-                               
+                                    <ItemTemplate>
                                         <div class="rank">
-                                      
-                                        <a href="single.aspx?id=<%#Eval("id") %>"  >
+                                            <a href="single.aspx?id=<%#Eval("id") %>">
                                                 <img id="picture" src="images/<%#Eval("picture").ToString().Split(',')[0]+".jpg" %>" alt="" /></a>
-                                        <div class="content">
-                                            <p id="name">
-                                                <%#Eval("name") %>
-                                            </p>
-                                            <p id ="brand">
-                                                <%#Eval("brand") %>
-                                            </p>
-                                            <p>
-                                                <a id="price"
-                                                    href="#"><i></i></a><span style="color: darkred">$ <%#Eval("price") %></span>
-                                            </p>
+                                            <div class="content">
+                                                <p id="name">
+                                                    <%#Eval("name") %></p>
+                                                <p id="brand">
+                                                    <%#Eval("brand") %></p>
+                                                <p>
+                                                    <a id="price"
+                                                        href="#"><i></i></a><span style="color: darkred">$ <%#Eval("price") %></span></p>
+                                            </div>
                                         </div>
-                                     
-                                    </div>
-                                </ItemTemplate>
+                                    </ItemTemplate>
                                 </asp:Repeater>
                             </div>
                         </section>
