@@ -37,10 +37,8 @@
                                     <asp:Repeater ID="Repeater2" runat="server">
                                         <ItemTemplate>
                                             <li <%#Container.ItemIndex == Convert.ToInt32(Session["pageIndex"].ToString()) ? "class=\"active\"" :String.Empty%>>
-                                                <%--<a href="products.aspx?page=<%#Eval("num") %>"><%#Eval("num") %></a>--%>
                                                 <asp:LinkButton ID="LinkButton1" Text=<%#Eval("num") %> runat="server" OnClick="PageClick"><%#Eval("num") %></asp:LinkButton>
                                             </li>
-                                            <%--<%#Container.ItemIndex == Convert.ToInt32(Session["lastPage"]) - 1 ? ("<li><a href=\"products.aspx?page=" + Session["lastPage"] + "\"><i class=\"fa fa-angle-right\">»</i></a></li>") :String.Empty%>--%>
                                         </ItemTemplate>
                                     </asp:Repeater>
                                     <li><asp:LinkButton ID="LastPage" runat="server" OnClick="LastPage_Click"><i class="fa fa-angle-right">»</i></asp:LinkButton></li>
