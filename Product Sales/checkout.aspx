@@ -22,7 +22,7 @@
                             <li></li>
                             <div class="clearfix"></div>
                         </ul>
-                        <asp:Repeater ID="Repeater1" runat="server" DataSourceID="SqlDataSource1">
+                        <asp:Repeater ID="Repeater1" runat="server" >
                             <ItemTemplate>
                                 <ul class="cart-header" id="header<%#Eval("id") %>">
                                     <div class="close" id="close<%#Eval("id") %>"></div>
@@ -53,6 +53,5 @@
         </div>
     </div>
     <!--end-ckeckout-->
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:productSalesConnectionString %>"></asp:SqlDataSource>
 </asp:Content>
 

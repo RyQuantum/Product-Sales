@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -25,12 +27,16 @@ namespace Product_Sales
             if (cart.Count != 0)
             {
                 String cartId = "(" + string.Join(",", cart.Keys) + ")";
-                SqlDataSource1.SelectCommand = "SELECT * FROM [products] WHERE [id] in " + cartId;
+                SqlConnection conn = new SqlConnection("Initial Catalog=ProductSales;Data Source=.;Integrated Security=true");
+                String command = "SELECT * FROM [products] WHERE [id] in " + cartId;
+                SqlDataAdapter sda = new SqlDataAdapter(command, conn);
+                DataSet ds = new DataSet();
+                sda.Fill(ds);
+                Repeater1.DataSource = ds;
                 Repeater1.DataBind();
             } else
             {
                 Repeater1.Dispose();
-                SqlDataSource1.Dispose();
             }
         }
     }
