@@ -11,7 +11,12 @@ namespace Product_Sales
 {
     public partial class single : System.Web.UI.Page
     {
-        
+        /************************************************************************* 
+*  single - parse the id and get the corresponsive info from the database; the sidebar will calculate the click times.   * 
+
+
+***********************************************************************/
+
         protected String id = "0";
 
         protected String name = "";

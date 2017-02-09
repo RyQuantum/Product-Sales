@@ -14,6 +14,11 @@ namespace Product_Sales
 {
     public partial class products : System.Web.UI.Page
     {
+        /************************************************************************* 
+*  products - parse the parameters of url, supervise the status of filters, and display the results of all conditions   * 
+
+
+***********************************************************************/
         String sql = "select * from products ";
         String category = "";
         String brand = "";

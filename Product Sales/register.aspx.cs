@@ -10,6 +10,11 @@ namespace Product_Sales
 {
     public partial class register : System.Web.UI.Page
     {
+        /************************************************************************* 
+*  register - help a new user create an account   * 
+
+
+***********************************************************************/
         protected void Page_Load(object sender, EventArgs e)
         {
 
