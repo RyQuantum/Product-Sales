@@ -9,20 +9,24 @@ namespace Product_Sales
 {
     public partial class editUser : System.Web.UI.Page
     {
+
+       // Edit user - to edit existing users in the database 
         protected void Page_Load(object sender, EventArgs e)
         {
 
             if ((String)Session["isAdmin"] == "Y")
             {
-                //success
+                //success - proceed displaying the page
             }
             else
             {
-                Response.Redirect("accounts.aspx");
+                // if not admim redirect to login page
+                Response.Redirect("account.aspx");
             }
         }
         protected void Binsert_Click(object sender, EventArgs e)
         {
+            // inserting the information into the database.
             this.userTableEdit.Insert();
         }
     }

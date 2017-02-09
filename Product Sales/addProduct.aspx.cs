@@ -18,10 +18,12 @@ namespace Product_Sales
 
             if ((String)Session["isAdmin"] == "Y")
             {
-                //success
+                //success - proceed displaying the page
             }
-            else {
-                Response.Redirect("adminLogin.aspx");
+            else
+            {
+                // if not admim redirect to login page
+                Response.Redirect("accounts.aspx");
             }
         }
 
@@ -35,6 +37,7 @@ namespace Product_Sales
                 {
                     try
                     {
+                        // reading the image from disk and uploading to server
                         string fileName = Path.GetFileName(insertImageFile.PostedFile.FileName);
                         insertImageFile.PostedFile.SaveAs(Server.MapPath("~/images/") + fileName);
                         uploadPicture.Text =  fileName;
@@ -45,6 +48,7 @@ namespace Product_Sales
                     }
                     try
                     {
+                        // performing sal insert operation
                         SqlDataSourceInsertProduct.Insert();
                     }
                     catch
@@ -52,7 +56,10 @@ namespace Product_Sales
                         HttpContext.Current.Response.Write("<script>alert('SQL Error Added product " + Insertname.Text + "')</script>");
                         return;
                     }
+
                     HttpContext.Current.Response.Write("<script>alert('Successfully Added product " + Insertname.Text + "')</script>");
+
+                    // after successful insertion - clearing all the entries 
                     Insertname.Text = "";
                     Insertprice.Text = "";
                     Insertdiscount.Text = "";
@@ -82,6 +89,8 @@ namespace Product_Sales
 
         private bool ValidateProductData()
         {
+            // validating the data 
+            // making sure rating value is between 0 and 5
             Int32 ratevalue = Convert.ToInt32(Insertrate.Text);
             if (ratevalue < 0)
                 ratevalue = 0;

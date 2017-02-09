@@ -13,21 +13,26 @@ namespace Product_Sales
         {
             if ((String)Session["isAdmin"] == "Y")
             {
-                //success
+                //success - proceed displaying the page
             }
             else
             {
-                Response.Redirect("accounts.aspx");
+                // if not admim redirect to login page
+                Response.Redirect("account.aspx");
             }
         }
         protected void Binsert_Click(object sender, EventArgs e)
         {
+            // performing validataion
             if (ValidateUserData() == true)
             {
                 try
                 {
+                    // performing sql insert 
                     SqlDataSourceInsertUser.Insert();
                     HttpContext.Current.Response.Write("<script>alert('Successfully Added user " + ins_Username.Text + "')</script>");
+
+                    // clearing all the fields after successful insertion 
                     ins_Username.Text = "";
                     ins_Password.Text = "";
                     passwdVerify.Text = "";
@@ -41,17 +46,21 @@ namespace Product_Sales
                 }
                 catch
                 {
+                    //Error in sql statement
                     HttpContext.Current.Response.Write("<script>alert('Not able to Added user " + ins_Username.Text + "')</script>");
                 }
             }
             else {
+                // error in input data
                 HttpContext.Current.Response.Write("<script>alert('Invalid Inputs')</script>");
             }
         }
 
         private bool ValidateUserData()
         {
+            // ckecking all the fields are valid
             if ( (ins_Username.Text.Length > 0 ) && (ins_Password.Text.Length > 0) && (ins_Email.Text.Length > 0) && (ins_FirstName.Text.Length > 0) )
+                // checking if password and retype pasword match
                 if (ins_Password.Text == passwdVerify.Text)
                     return true;
             return false;

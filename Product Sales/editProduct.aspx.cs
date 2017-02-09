@@ -14,11 +14,12 @@ namespace Product_Sales
 
             if ((String)Session["isAdmin"] == "Y")
             {
-                //success
+                //success - proceed displaying the page
             }
             else
             {
-                Response.Redirect("accounts.aspx");
+                // if not admim redirect to login page
+                Response.Redirect("account.aspx");
             }
         }
 
