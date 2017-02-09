@@ -11,6 +11,11 @@ namespace Product_Sales
 {
     public partial class index : System.Web.UI.Page
     {
+        /************************************************************************* 
+*  index - the home page, display the hot items in the website   * 
+
+
+***********************************************************************/
         protected void Page_Load(object sender, EventArgs e)
         {
             if(!String.IsNullOrEmpty(Request.QueryString["logout"]))

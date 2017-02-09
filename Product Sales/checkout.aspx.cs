@@ -11,6 +11,12 @@ namespace Product_Sales
 {
     public partial class checkout : System.Web.UI.Page
     {
+        /************************************************************************* 
+   *  checkout - record the items that users reserved   * 
+
+
+   ***********************************************************************/
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["cart"] == null)

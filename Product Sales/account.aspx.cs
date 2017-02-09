@@ -11,6 +11,11 @@ namespace Product_Sales
 {
     public partial class account : System.Web.UI.Page
     {
+        /************************************************************************* 
+*  account - use to help users to log in to the system base on username and password.   * 
+
+
+***********************************************************************/
         protected void Page_Load(object sender, EventArgs e)
         {
 
