@@ -26,10 +26,10 @@
                         <asp:TextBox ID="ins_Username" placeholder="Username" TabIndex="1" runat="server" required></asp:TextBox>
                         <asp:TextBox ID="ins_Password" placeholder="Password" type="password" TabIndex="2" runat="server" required></asp:TextBox>
                         <asp:TextBox ID="passwdVerify" placeholder="Re-type Password" type="password" TabIndex="3" runat="server" required></asp:TextBox>
-                        <asp:TextBox ID="ins_Email" placeholder="Email" TabIndex="4" runat="server" required></asp:TextBox>
+                        <asp:TextBox ID="ins_Email" placeholder="Email" type="email" TabIndex="4" runat="server" required></asp:TextBox>
                         <asp:DropDownList ID="ins_sex" TabIndex="5" runat="server">
-                            <asp:ListItem Text="Male" Value="M" Selected="True"></asp:ListItem>
-                            <asp:ListItem Text="Female" Value="F"></asp:ListItem>
+                            <asp:ListItem Text="Male" Value="1" Selected="True"></asp:ListItem>
+                            <asp:ListItem Text="Female" Value="0"></asp:ListItem>
                         </asp:DropDownList>
                         <asp:DropDownList ID="ins_admin" TabIndex="6" runat="server">
                             <asp:ListItem Text="Admin" Value="Y"></asp:ListItem>
